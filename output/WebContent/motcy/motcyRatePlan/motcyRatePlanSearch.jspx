@@ -1,0 +1,100 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.motcyRatePlan.MotcyRatePlanSearchController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/motcyRatePlan/motcyRatePlanSearch.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="codeWC" class="control-label">${msg.CODE}</label>
+                            <div class="controls">
+                                <input type="text" id="codeWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="descrpWC" class="control-label">${msg.DESCRP}</label>
+                            <div class="controls">
+                                <input type="text" id="descrpWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="scGroupWC" class="control-label">${msg.SC_GROUP}</label>
+                            <div class="controls">
+                                <select id="scGroupWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="ID" value="NAME" sql="${sql.MOTCY_SC_GROUP_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdWC" class="control-label">${msg.CREATED}</label>
+                            <div class="controls">
+                                <calendar id="createdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdByWC" class="control-label">${msg.CREATED_BY}</label>
+                            <div class="controls">
+                                <input type="text" id="createdByWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="updatedWC" class="control-label">${msg.UPDATED}</label>
+                            <div class="controls">
+                                <calendar id="updatedWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="updatedByWC" class="control-label">${msg.UPDATED_BY}</label>
+                            <div class="controls">
+                                <input type="text" id="updatedByWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="doSearch" class=" btn-primary btn">${msg.SEARCH_CAPTION}</linkcommand>
+                    <hr/>
+                </div>
+                <datatable datasource="${sqlExp.data_source}" var="motcyRatePlan_item" casesensitive="true" table="MOTCY_RATE_PLAN" showrowindex="true" autobind="true" noresults="${msg.NO_RESULTS}" sql="${sql.MOTCY_RATE_PLAN_SEARCH}">
+                    <dataparam control="codeWC" expression="${sqlExp.MOTCY_RATE_PLAN_CODE}"/>
+                    <dataparam control="descrpWC" expression="${sqlExp.MOTCY_RATE_PLAN_DESCRP}"/>
+                    <dataparam control="scGroupWC" expression="${sqlExp.MOTCY_RATE_PLAN_SC_GROUP}"/>
+                    <dataparam control="createdWC" expression="${sqlExp.MOTCY_RATE_PLAN_CREATED}"/>
+                    <dataparam control="createdByWC" expression="${sqlExp.MOTCY_RATE_PLAN_CREATED_BY}"/>
+                    <dataparam control="updatedWC" expression="${sqlExp.MOTCY_RATE_PLAN_UPDATED}"/>
+                    <dataparam control="updatedByWC" expression="${sqlExp.MOTCY_RATE_PLAN_UPDATED_BY}"/>
+                    <datapk name="CODE"/>
+                    <datacolumn fieldname="CODE" type="string" text="${msg.CODE}" id="CODE"/>
+                    <datacolumn fieldname="DESCRP" type="string" text="${msg.DESCRP}" id="DESCRP"/>
+                    <datacolumn fieldname="SC_GROUP" type="lookup" lookup="SC_GROUP_FKLP" text="${msg.SC_GROUP}" id="SC_GROUP"/>
+                    <datacolumn fieldname="CREATED" type="date" text="${msg.CREATED}" id="CREATED"/>
+                    <datacolumn fieldname="CREATED_BY" type="numeric" text="${msg.CREATED_BY}" id="CREATED_BY"/>
+                    <datacolumn fieldname="UPDATED" type="date" text="${msg.UPDATED}" id="UPDATED"/>
+                    <datacolumn fieldname="UPDATED_BY" type="numeric" text="${msg.UPDATED_BY}" id="UPDATED_BY"/>
+                    <datacolumn>
+                        <itemtemplate>
+                            <a href="/motcy/motcyRatePlan/motcyRatePlanView.jspx?id=${motcyRatePlan_item.id}" class="btn btn-mini">
+                                <i class="icon-list-alt icon-black"/>${msg.DETAILS}</a>
+                        </itemtemplate>
+                    </datacolumn>
+                    <datalookup key="ID" sql="${sqlExp.MOTCY_SC_GROUP_LOOKUP}" id="SC_GROUP_FKLP"/>
+                    <datacolumncommand type="edit"/>
+                    <datacolumncommand confirm="${msg.CONFIRM_DELETE}" type="delete"/>
+                    <exporttoexcel rowstoexport="all" filename="MOTCY_RATE_PLAN.xls" command="${msg.SAVE_TO_EXCEL}"/>
+                </datatable>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

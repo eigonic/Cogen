@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page controller="com.bay.da.web.controller.LicenceSearchController" master="/pages/master.jspx">
+	<contentHolder id="mainholder">
+		<form class="well form-horizontal" action="/pages/licenceSearch.da">
+			<ajaxpanel>
+                <fieldset>
+                    <div class="row">
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="idWC" class="control-label">${msg.ID}</label>
+                                <div class="controls">
+                                    <input type="text" id="idWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="startDateWC" class="control-label">${msg.START_DATE}</label>
+                                <div class="controls">
+                                    <calendar id="startDateWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="endDateWC" class="control-label">${msg.END_DATE}</label>
+                                <div class="controls">
+                                    <calendar id="endDateWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="notesWC" class="control-label">${msg.NOTES}</label>
+                                <div class="controls">
+                                    <input type="text" id="notesWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="createdByWC" class="control-label">${msg.CREATED_BY}</label>
+                                <div class="controls">
+                                    <select id="createdByWC">
+                                        <option>----</option>
+                                        <datalookup datasource="${sql.data_source}" key="ID" value="NAME" sql="${sql.users_LOOKUP}"/>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="creationDateWC" class="control-label">${msg.CREATION_DATE}</label>
+                                <div class="controls">
+                                    <calendar id="creationDateWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="att1NameWC" class="control-label">${msg.ATT1_NAME}</label>
+                                <div class="controls">
+                                    <input type="text" id="att1NameWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="att1MimeWC" class="control-label">${msg.ATT1_MIME}</label>
+                                <div class="controls">
+                                    <input type="text" id="att1MimeWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="att2NameWC" class="control-label">${msg.ATT2_NAME}</label>
+                                <div class="controls">
+                                    <input type="text" id="att2NameWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="att2MimeWC" class="control-label">${msg.ATT2_MIME}</label>
+                                <div class="controls">
+                                    <input type="text" id="att2MimeWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="att3NameWC" class="control-label">${msg.ATT3_NAME}</label>
+                                <div class="controls">
+                                    <input type="text" id="att3NameWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="att3MimeWC" class="control-label">${msg.ATT3_MIME}</label>
+                                <div class="controls">
+                                    <input type="text" id="att3MimeWC"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-action">
+                        <input type="button" onserverclick="doSearch" value="${msg.SEARCH_CAPTION}" class=" btn-primary"/>
+                        <hr/>
+                    </div>
+                    <datatable datasource="${sql.data_source}" var="licence_item" casesensitive="true" table="licence" showrowindex="true" autobind="true" noresults="${msg.NO_RESULTS}" sql="${sql.licenceSEARCH}">
+                        <dataparam control="idWC" expression="${sql.licence_ID}"/>
+                        <dataparam control="startDateWC" expression="${sql.licence_START_DATE}"/>
+                        <dataparam control="endDateWC" expression="${sql.licence_END_DATE}"/>
+                        <dataparam control="notesWC" expression="${sql.licence_NOTES}"/>
+                        <dataparam control="createdByWC" expression="${sql.licence_CREATED_BY}"/>
+                        <dataparam control="creationDateWC" expression="${sql.licence_CREATION_DATE}"/>
+                        <dataparam control="att1WC" expression="${sql.licence_ATT1}"/>
+                        <dataparam control="att2WC" expression="${sql.licence_ATT2}"/>
+                        <dataparam control="att3WC" expression="${sql.licence_ATT3}"/>
+                        <dataparam control="att1NameWC" expression="${sql.licence_ATT1_NAME}"/>
+                        <dataparam control="att1MimeWC" expression="${sql.licence_ATT1_MIME}"/>
+                        <dataparam control="att2NameWC" expression="${sql.licence_ATT2_NAME}"/>
+                        <dataparam control="att2MimeWC" expression="${sql.licence_ATT2_MIME}"/>
+                        <dataparam control="att3NameWC" expression="${sql.licence_ATT3_NAME}"/>
+                        <dataparam control="att3MimeWC" expression="${sql.licence_ATT3_MIME}"/>
+                        <datapk name="ID"/>
+                        <datacolumn fieldname="ID" type="numeric" text="${msg.ID}" id="ID"/>
+                        <datacolumn fieldname="START_DATE" type="date" text="${msg.START_DATE}" id="START_DATE"/>
+                        <datacolumn fieldname="END_DATE" type="date" text="${msg.END_DATE}" id="END_DATE"/>
+                        <datacolumn fieldname="NOTES" type="string" text="${msg.NOTES}" id="NOTES"/>
+                        <datacolumn fieldname="CREATED_BY" type="lookup" lookup="CREATED_BY_FKLP" text="${msg.CREATED_BY}" id="CREATED_BY"/>
+                        <datacolumn fieldname="CREATION_DATE" type="date" text="${msg.CREATION_DATE}" id="CREATION_DATE"/>
+                        <datacolumn fieldname="ATT1" text="${msg.ATT1}" id="ATT1"/>
+                        <datacolumn fieldname="ATT2" text="${msg.ATT2}" id="ATT2"/>
+                        <datacolumn fieldname="ATT3" text="${msg.ATT3}" id="ATT3"/>
+                        <datacolumn fieldname="ATT1_NAME" type="string" text="${msg.ATT1_NAME}" id="ATT1_NAME"/>
+                        <datacolumn fieldname="ATT1_MIME" type="string" text="${msg.ATT1_MIME}" id="ATT1_MIME"/>
+                        <datacolumn fieldname="ATT2_NAME" type="string" text="${msg.ATT2_NAME}" id="ATT2_NAME"/>
+                        <datacolumn fieldname="ATT2_MIME" type="string" text="${msg.ATT2_MIME}" id="ATT2_MIME"/>
+                        <datacolumn fieldname="ATT3_NAME" type="string" text="${msg.ATT3_NAME}" id="ATT3_NAME"/>
+                        <datacolumn fieldname="ATT3_MIME" type="string" text="${msg.ATT3_MIME}" id="ATT3_MIME"/>
+                        <datacolumn>
+                            <itemtemplate>
+                                <a href="/pages/licenceView.da?id=${licence_item.id}" class="btn btn-large">
+                                    <i class="icon-list-alt icon-black"/>${msg.DETAILS}</a>
+                            </itemtemplate>
+                        </datacolumn>
+                        <datalookup key="ID" sql="${sql.users_LOOKUP}" id="CREATED_BY_FKLP"/>
+                        <datacolumncommand type="edit"/>
+                        <datacolumncommand confirm="${msg.CONFIRM_DELETE}" type="delete"/>
+                    </datatable>
+                </fieldset>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

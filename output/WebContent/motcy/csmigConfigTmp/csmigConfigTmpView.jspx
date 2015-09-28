@@ -1,0 +1,117 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csmigConfigTmp.CsmigConfigTmpViewController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csmigConfigTmp/csmigConfigTmpView.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="idWC" class="control-label">${msg.ID}</label>
+                            <div class="controls">${csmigConfigTmp.id}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="mdspPkgWC" class="control-label">${msg.MDSP_PKG}</label>
+                            <div class="controls">${csmigConfigTmp.mdspPkg}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="csOfferIdWC" class="control-label">${msg.CS_OFFER_ID}</label>
+                            <div class="controls">${csmigConfigTmp.csOfferId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="csUcIdWC" class="control-label">${msg.CS_UC_ID}</label>
+                            <div class="controls">${csmigConfigTmp.csUcId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="esdpOfferIdWC" class="control-label">${msg.ESDP_OFFER_ID}</label>
+                            <div class="controls">${csmigConfigTmp.esdpOfferId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="esdpCampaignIdWC" class="control-label">${msg.ESDP_CAMPAIGN_ID}</label>
+                            <div class="controls">${csmigConfigTmp.esdpCampaignId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="csMigratorWC" class="control-label">${msg.CS_MIGRATOR}</label>
+                            <div class="controls">${csmigConfigTmp.csMigrator}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="esdpMigratorWC" class="control-label">${msg.ESDP_MIGRATOR}</label>
+                            <div class="controls">${csmigConfigTmp.esdpMigrator}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="extOfferIdWC" class="control-label">${msg.EXT_OFFER_ID}</label>
+                            <div class="controls">${csmigConfigTmp.extOfferId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="rateplanIdWC" class="control-label">${msg.RATEPLAN_ID}</label>
+                            <div class="controls">${csmigConfigTmp.rateplanId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="serviceIdWC" class="control-label">${msg.SERVICE_ID}</label>
+                            <div class="controls">${csmigConfigTmp.serviceId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="allowMultiWC" class="control-label">${msg.ALLOW_MULTI}</label>
+                            <div class="controls">${csmigConfigTmp.allowMulti}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerGroupWC" class="control-label">${msg.OFFER_GROUP}</label>
+                            <div class="controls">${csmigConfigTmp.offerGroup}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="packageIdWC" class="control-label">${msg.PACKAGE_ID}</label>
+                            <div class="controls">${csmigConfigTmp.packageId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="csOfferId2WC" class="control-label">${msg.CS_OFFER_ID2}</label>
+                            <div class="controls">${csmigConfigTmp.csOfferId2}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="nameWC" class="control-label">${msg.NAME}</label>
+                            <div class="controls">${csmigConfigTmp.name}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="allowanceWC" class="control-label">${msg.ALLOWANCE}</label>
+                            <div class="controls">${csmigConfigTmp.allowance}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <a class=" btn-primary btn"/>
+                    <linkcommand confirmation="${msg.CONFIRM_DELETE}" onserverclick="deleteBean" class=" btn-danger btn">
+                        <i class="icon-trash icon-white"/> ${msg.DELETE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

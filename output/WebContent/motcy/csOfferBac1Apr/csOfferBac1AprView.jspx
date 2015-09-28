@@ -1,0 +1,63 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csOfferBac1Apr.CsOfferBac1AprViewController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csOfferBac1Apr/csOfferBac1AprView.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerIdWC" class="control-label">${msg.OFFER_ID}</label>
+                            <div class="controls">${csOfferBac1Apr.offerId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="productNameWC" class="control-label">${msg.PRODUCT_NAME}</label>
+                            <div class="controls">${csOfferBac1Apr.productName}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerTypeWC" class="control-label">${msg.OFFER_TYPE}</label>
+                            <div class="controls">${csOfferBac1Apr.offerType}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdDateWC" class="control-label">${msg.CREATED_DATE}</label>
+                            <div class="controls">${csOfferBac1Apr.createdDate}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="productDescriptionWC" class="control-label">${msg.PRODUCT_DESCRIPTION}</label>
+                            <div class="controls">${csOfferBac1Apr.productDescription}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="roamingTypeWC" class="control-label">${msg.ROAMING_TYPE}</label>
+                            <div class="controls">${csOfferBac1Apr.roamingType}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerTeleserviceWC" class="control-label">${msg.OFFER_TELESERVICE}</label>
+                            <div class="controls">${csOfferBac1Apr.offerTeleservice}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerRemarkWC" class="control-label">${msg.OFFER_REMARK}</label>
+                            <div class="controls">${csOfferBac1Apr.offerRemark}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <a class=" btn-primary btn"/>
+                    <linkcommand confirmation="${msg.CONFIRM_DELETE}" onserverclick="deleteBean" class=" btn-danger btn">
+                        <i class="icon-trash icon-white"/> ${msg.DELETE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

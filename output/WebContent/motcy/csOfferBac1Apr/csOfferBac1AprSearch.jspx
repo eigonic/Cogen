@@ -1,0 +1,105 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csOfferBac1Apr.CsOfferBac1AprSearchController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csOfferBac1Apr/csOfferBac1AprSearch.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerIdWC" class="control-label">${msg.OFFER_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="offerIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="productNameWC" class="control-label">${msg.PRODUCT_NAME}</label>
+                            <div class="controls">
+                                <input type="text" id="productNameWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerTypeWC" class="control-label">${msg.OFFER_TYPE}</label>
+                            <div class="controls">
+                                <input type="text" id="offerTypeWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdDateWC" class="control-label">${msg.CREATED_DATE}</label>
+                            <div class="controls">
+                                <calendar id="createdDateWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="productDescriptionWC" class="control-label">${msg.PRODUCT_DESCRIPTION}</label>
+                            <div class="controls">
+                                <input type="text" id="productDescriptionWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="roamingTypeWC" class="control-label">${msg.ROAMING_TYPE}</label>
+                            <div class="controls">
+                                <input type="text" id="roamingTypeWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerTeleserviceWC" class="control-label">${msg.OFFER_TELESERVICE}</label>
+                            <div class="controls">
+                                <input type="text" id="offerTeleserviceWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerRemarkWC" class="control-label">${msg.OFFER_REMARK}</label>
+                            <div class="controls">
+                                <input type="text" id="offerRemarkWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="doSearch" class=" btn-primary btn">${msg.SEARCH_CAPTION}</linkcommand>
+                    <hr/>
+                </div>
+                <datatable datasource="${sqlExp.data_source}" var="csOfferBac1Apr_item" casesensitive="true" table="CS_OFFER_BAC_1_APR" showrowindex="true" autobind="true" noresults="${msg.NO_RESULTS}" sql="${sql.CS_OFFER_BAC_1_APR_SEARCH}">
+                    <dataparam control="offerIdWC" expression="${sqlExp.CS_OFFER_BAC_1_APR_OFFER_ID}"/>
+                    <dataparam control="productNameWC" expression="${sqlExp.CS_OFFER_BAC_1_APR_PRODUCT_NAME}"/>
+                    <dataparam control="offerTypeWC" expression="${sqlExp.CS_OFFER_BAC_1_APR_OFFER_TYPE}"/>
+                    <dataparam control="createdDateWC" expression="${sqlExp.CS_OFFER_BAC_1_APR_CREATED_DATE}"/>
+                    <dataparam control="productDescriptionWC" expression="${sqlExp.CS_OFFER_BAC_1_APR_PRODUCT_DESCRIPTION}"/>
+                    <dataparam control="roamingTypeWC" expression="${sqlExp.CS_OFFER_BAC_1_APR_ROAMING_TYPE}"/>
+                    <dataparam control="offerTeleserviceWC" expression="${sqlExp.CS_OFFER_BAC_1_APR_OFFER_TELESERVICE}"/>
+                    <dataparam control="offerRemarkWC" expression="${sqlExp.CS_OFFER_BAC_1_APR_OFFER_REMARK}"/>
+                    <datacolumn fieldname="OFFER_ID" type="numeric" text="${msg.OFFER_ID}" id="OFFER_ID"/>
+                    <datacolumn fieldname="PRODUCT_NAME" type="string" text="${msg.PRODUCT_NAME}" id="PRODUCT_NAME"/>
+                    <datacolumn fieldname="OFFER_TYPE" type="numeric" text="${msg.OFFER_TYPE}" id="OFFER_TYPE"/>
+                    <datacolumn fieldname="CREATED_DATE" type="date" text="${msg.CREATED_DATE}" id="CREATED_DATE"/>
+                    <datacolumn fieldname="PRODUCT_DESCRIPTION" type="string" text="${msg.PRODUCT_DESCRIPTION}" id="PRODUCT_DESCRIPTION"/>
+                    <datacolumn fieldname="ROAMING_TYPE" type="string" text="${msg.ROAMING_TYPE}" id="ROAMING_TYPE"/>
+                    <datacolumn fieldname="OFFER_TELESERVICE" type="string" text="${msg.OFFER_TELESERVICE}" id="OFFER_TELESERVICE"/>
+                    <datacolumn fieldname="OFFER_REMARK" type="string" text="${msg.OFFER_REMARK}" id="OFFER_REMARK"/>
+                    <datacolumn>
+                        <itemtemplate>
+                            <a href="/motcy/csOfferBac1Apr/csOfferBac1AprView.jspx?id=${csOfferBac1Apr_item.id}" class="btn btn-mini">
+                                <i class="icon-list-alt icon-black"/>${msg.DETAILS}</a>
+                        </itemtemplate>
+                    </datacolumn>
+                    <datacolumncommand type="edit"/>
+                    <datacolumncommand confirm="${msg.CONFIRM_DELETE}" type="delete"/>
+                    <exporttoexcel rowstoexport="all" filename="CS_OFFER_BAC_1_APR.xls" command="${msg.SAVE_TO_EXCEL}"/>
+                </datatable>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

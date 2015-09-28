@@ -1,0 +1,77 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csmigReconsileSub20141111.CsmigReconsileSub20141111EditController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csmigReconsileSub20141111/csmigReconsileSub20141111Edit.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="msisdnWC" class="control-label">${msg.MSISDN}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSub20141111.msisdn}" id="msisdnWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="statusWC" class="control-label">${msg.STATUS}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSub20141111.status}" id="statusWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="typeWC" class="control-label">${msg.TYPE}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSub20141111.type}" id="typeWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="pkgCountWC" class="control-label">${msg.PKG_COUNT}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSub20141111.pkgCount}" id="pkgCountWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="processorWC" class="control-label">${msg.PROCESSOR}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSub20141111.processor}" id="processorWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="completedWC" class="control-label">${msg.COMPLETED}</label>
+                            <div class="controls">
+                                <calendar value="${csmigReconsileSub20141111.completed}" id="completedWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="failReasonWC" class="control-label">${msg.FAIL_REASON}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSub20141111.failReason}" id="failReasonWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="failMsgWC" class="control-label">${msg.FAIL_MSG}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSub20141111.failMsg}" id="failMsgWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="saveBean" class=" btn-primary btn">${msg.SAVE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

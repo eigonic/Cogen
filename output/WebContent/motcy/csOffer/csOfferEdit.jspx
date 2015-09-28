@@ -1,0 +1,86 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csOffer.CsOfferEditController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csOffer/csOfferEdit.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerIdWC" class="control-label">${msg.OFFER_ID}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOffer.offerId}" id="offerIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="productNameWC" class="control-label">${msg.PRODUCT_NAME}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOffer.productName}" id="productNameWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerTypeWC" class="control-label">${msg.OFFER_TYPE}</label>
+                            <div class="controls">
+                                <select value="${csOffer.offerType}" id="offerTypeWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="OFFER_TYPE_ID" value="NAME" sql="${sql.CS_OFFER_TYPE_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdDateWC" class="control-label">${msg.CREATED_DATE}</label>
+                            <div class="controls">
+                                <calendar value="${csOffer.createdDate}" id="createdDateWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="productDescriptionWC" class="control-label">${msg.PRODUCT_DESCRIPTION}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOffer.productDescription}" id="productDescriptionWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="roamingTypeWC" class="control-label">${msg.ROAMING_TYPE}</label>
+                            <div class="controls">
+                                <select value="${csOffer.roamingType}" id="roamingTypeWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="LOCATION_ID" value="NAME" sql="${sql.CS_OFFER_LOCATION_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerTeleserviceWC" class="control-label">${msg.OFFER_TELESERVICE}</label>
+                            <div class="controls">
+                                <select value="${csOffer.offerTeleservice}" id="offerTeleserviceWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="TELE_ID" value="NAME" sql="${sql.CS_OFFER_TELESERVICE_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerRemarkWC" class="control-label">${msg.OFFER_REMARK}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOffer.offerRemark}" id="offerRemarkWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="saveBean" class=" btn-primary btn">${msg.SAVE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

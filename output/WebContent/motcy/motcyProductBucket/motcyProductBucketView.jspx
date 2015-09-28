@@ -1,0 +1,51 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.motcyProductBucket.MotcyProductBucketViewController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/motcyProductBucket/motcyProductBucketView.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="prodIdWC" class="control-label">${msg.PROD_ID}</label>
+                            <div class="controls">${motcyProductBucket.prodId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="bucketIdWC" class="control-label">${msg.BUCKET_ID}</label>
+                            <div class="controls">${motcyProductBucket.bucketId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdWC" class="control-label">${msg.CREATED}</label>
+                            <div class="controls">${motcyProductBucket.created}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdByWC" class="control-label">${msg.CREATED_BY}</label>
+                            <div class="controls">${motcyProductBucket.createdBy}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="udpatedWC" class="control-label">${msg.UDPATED}</label>
+                            <div class="controls">${motcyProductBucket.udpated}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="udpatedByWC" class="control-label">${msg.UDPATED_BY}</label>
+                            <div class="controls">${motcyProductBucket.udpatedBy}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <a class=" btn-primary btn"/>
+                    <linkcommand confirmation="${msg.CONFIRM_DELETE}" onserverclick="deleteBean" class=" btn-danger btn">
+                        <i class="icon-trash icon-white"/> ${msg.DELETE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

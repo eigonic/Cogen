@@ -1,0 +1,310 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csOfferResource.CsOfferResourceSearchController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csOfferResource/csOfferResourceSearch.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="idWC" class="control-label">${msg.ID}</label>
+                            <div class="controls">
+                                <input type="text" id="idWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerIdResourceWC" class="control-label">${msg.OFFER_ID_RESOURCE}</label>
+                            <div class="controls">
+                                <select id="offerIdResourceWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="OFFER_ID" value="NAME" sql="${sql.CS_OFFER_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceTypeWC" class="control-label">${msg.RESOURCE_TYPE}</label>
+                            <div class="controls">
+                                <select id="resourceTypeWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="RES_TYPE_ID" value="NAME" sql="${sql.CS_RESOURCE_TYPE_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceIdWC" class="control-label">${msg.RESOURCE_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="resourceIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceUnitTypeWC" class="control-label">${msg.RESOURCE_UNIT_TYPE}</label>
+                            <div class="controls">
+                                <select id="resourceUnitTypeWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="UNIT_ID" value="NAME" sql="${sql.CS_RESOURCE_UNIT_TYPE_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceTeleserviceWC" class="control-label">${msg.RESOURCE_TELESERVICE}</label>
+                            <div class="controls">
+                                <select id="resourceTeleserviceWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="TELE_ID" value="NAME" sql="${sql.CS_OFFER_TELESERVICE_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="apnValueWC" class="control-label">${msg.APN_VALUE}</label>
+                            <div class="controls">
+                                <input type="text" id="apnValueWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="mappedResourceTypeWC" class="control-label">${msg.MAPPED_RESOURCE_TYPE}</label>
+                            <div class="controls">
+                                <select id="mappedResourceTypeWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="RES_TYPE_ID" value="NAME" sql="${sql.CS_RESOURCE_TYPE_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="mappedResourceIdWC" class="control-label">${msg.MAPPED_RESOURCE_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="mappedResourceIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resouceDescriptionWC" class="control-label">${msg.RESOUCE_DESCRIPTION}</label>
+                            <div class="controls">
+                                <input type="text" id="resouceDescriptionWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceRemarkWC" class="control-label">${msg.RESOURCE_REMARK}</label>
+                            <div class="controls">
+                                <input type="text" id="resourceRemarkWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceRoamingTypeWC" class="control-label">${msg.RESOURCE_ROAMING_TYPE}</label>
+                            <div class="controls">
+                                <select id="resourceRoamingTypeWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="LOCATION_ID" value="NAME" sql="${sql.CS_OFFER_LOCATION_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceDestinationWC" class="control-label">${msg.RESOURCE_DESTINATION}</label>
+                            <div class="controls">
+                                <input type="text" id="resourceDestinationWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceFactorWC" class="control-label">${msg.RESOURCE_FACTOR}</label>
+                            <div class="controls">
+                                <input type="text" id="resourceFactorWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="maximumValueWC" class="control-label">${msg.MAXIMUM_VALUE}</label>
+                            <div class="controls">
+                                <input type="text" id="maximumValueWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info1WC" class="control-label">${msg.INFO1}</label>
+                            <div class="controls">
+                                <input type="text" id="info1WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info2WC" class="control-label">${msg.INFO2}</label>
+                            <div class="controls">
+                                <input type="text" id="info2WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info3WC" class="control-label">${msg.INFO3}</label>
+                            <div class="controls">
+                                <input type="text" id="info3WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerExist1WC" class="control-label">${msg.OFFER_EXIST1}</label>
+                            <div class="controls">
+                                <input type="text" id="offerExist1WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerMulFactorWC" class="control-label">${msg.OFFER_MUL_FACTOR}</label>
+                            <div class="controls">
+                                <input type="text" id="offerMulFactorWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info4WC" class="control-label">${msg.INFO4}</label>
+                            <div class="controls">
+                                <input type="text" id="info4WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info5WC" class="control-label">${msg.INFO5}</label>
+                            <div class="controls">
+                                <input type="text" id="info5WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info6WC" class="control-label">${msg.INFO6}</label>
+                            <div class="controls">
+                                <input type="text" id="info6WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info7WC" class="control-label">${msg.INFO7}</label>
+                            <div class="controls">
+                                <input type="text" id="info7WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info8WC" class="control-label">${msg.INFO8}</label>
+                            <div class="controls">
+                                <input type="text" id="info8WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info9WC" class="control-label">${msg.INFO9}</label>
+                            <div class="controls">
+                                <input type="text" id="info9WC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="doSearch" class=" btn-primary btn">${msg.SEARCH_CAPTION}</linkcommand>
+                    <hr/>
+                </div>
+                <datatable datasource="${sqlExp.data_source}" var="csOfferResource_item" casesensitive="true" table="CS_OFFER_RESOURCE" showrowindex="true" autobind="true" noresults="${msg.NO_RESULTS}" sql="${sql.CS_OFFER_RESOURCE_SEARCH}">
+                    <dataparam control="idWC" expression="${sqlExp.CS_OFFER_RESOURCE_ID}"/>
+                    <dataparam control="offerIdResourceWC" expression="${sqlExp.CS_OFFER_RESOURCE_OFFER_ID_RESOURCE}"/>
+                    <dataparam control="resourceTypeWC" expression="${sqlExp.CS_OFFER_RESOURCE_RESOURCE_TYPE}"/>
+                    <dataparam control="resourceIdWC" expression="${sqlExp.CS_OFFER_RESOURCE_RESOURCE_ID}"/>
+                    <dataparam control="resourceUnitTypeWC" expression="${sqlExp.CS_OFFER_RESOURCE_RESOURCE_UNIT_TYPE}"/>
+                    <dataparam control="resourceTeleserviceWC" expression="${sqlExp.CS_OFFER_RESOURCE_RESOURCE_TELESERVICE}"/>
+                    <dataparam control="apnValueWC" expression="${sqlExp.CS_OFFER_RESOURCE_APN_VALUE}"/>
+                    <dataparam control="mappedResourceTypeWC" expression="${sqlExp.CS_OFFER_RESOURCE_MAPPED_RESOURCE_TYPE}"/>
+                    <dataparam control="mappedResourceIdWC" expression="${sqlExp.CS_OFFER_RESOURCE_MAPPED_RESOURCE_ID}"/>
+                    <dataparam control="resouceDescriptionWC" expression="${sqlExp.CS_OFFER_RESOURCE_RESOUCE_DESCRIPTION}"/>
+                    <dataparam control="resourceRemarkWC" expression="${sqlExp.CS_OFFER_RESOURCE_RESOURCE_REMARK}"/>
+                    <dataparam control="resourceRoamingTypeWC" expression="${sqlExp.CS_OFFER_RESOURCE_RESOURCE_ROAMING_TYPE}"/>
+                    <dataparam control="resourceDestinationWC" expression="${sqlExp.CS_OFFER_RESOURCE_RESOURCE_DESTINATION}"/>
+                    <dataparam control="resourceFactorWC" expression="${sqlExp.CS_OFFER_RESOURCE_RESOURCE_FACTOR}"/>
+                    <dataparam control="maximumValueWC" expression="${sqlExp.CS_OFFER_RESOURCE_MAXIMUM_VALUE}"/>
+                    <dataparam control="info1WC" expression="${sqlExp.CS_OFFER_RESOURCE_INFO1}"/>
+                    <dataparam control="info2WC" expression="${sqlExp.CS_OFFER_RESOURCE_INFO2}"/>
+                    <dataparam control="info3WC" expression="${sqlExp.CS_OFFER_RESOURCE_INFO3}"/>
+                    <dataparam control="offerExist1WC" expression="${sqlExp.CS_OFFER_RESOURCE_OFFER_EXIST1}"/>
+                    <dataparam control="offerMulFactorWC" expression="${sqlExp.CS_OFFER_RESOURCE_OFFER_MUL_FACTOR}"/>
+                    <dataparam control="info4WC" expression="${sqlExp.CS_OFFER_RESOURCE_INFO4}"/>
+                    <dataparam control="info5WC" expression="${sqlExp.CS_OFFER_RESOURCE_INFO5}"/>
+                    <dataparam control="info6WC" expression="${sqlExp.CS_OFFER_RESOURCE_INFO6}"/>
+                    <dataparam control="info7WC" expression="${sqlExp.CS_OFFER_RESOURCE_INFO7}"/>
+                    <dataparam control="info8WC" expression="${sqlExp.CS_OFFER_RESOURCE_INFO8}"/>
+                    <dataparam control="info9WC" expression="${sqlExp.CS_OFFER_RESOURCE_INFO9}"/>
+                    <datapk name="ID"/>
+                    <datacolumn fieldname="ID" type="numeric" text="${msg.ID}" id="ID"/>
+                    <datacolumn fieldname="OFFER_ID_RESOURCE" type="lookup" lookup="OFFER_ID_RESOURCE_FKLP" text="${msg.OFFER_ID_RESOURCE}" id="OFFER_ID_RESOURCE"/>
+                    <datacolumn fieldname="RESOURCE_TYPE" type="lookup" lookup="RESOURCE_TYPE_FKLP" text="${msg.RESOURCE_TYPE}" id="RESOURCE_TYPE"/>
+                    <datacolumn fieldname="RESOURCE_ID" type="numeric" text="${msg.RESOURCE_ID}" id="RESOURCE_ID"/>
+                    <datacolumn fieldname="RESOURCE_UNIT_TYPE" type="lookup" lookup="RESOURCE_UNIT_TYPE_FKLP" text="${msg.RESOURCE_UNIT_TYPE}" id="RESOURCE_UNIT_TYPE"/>
+                    <datacolumn fieldname="RESOURCE_TELESERVICE" type="lookup" lookup="RESOURCE_TELESERVICE_FKLP" text="${msg.RESOURCE_TELESERVICE}" id="RESOURCE_TELESERVICE"/>
+                    <datacolumn fieldname="APN_VALUE" type="string" text="${msg.APN_VALUE}" id="APN_VALUE"/>
+                    <datacolumn fieldname="MAPPED_RESOURCE_TYPE" type="lookup" lookup="MAPPED_RESOURCE_TYPE_FKLP" text="${msg.MAPPED_RESOURCE_TYPE}" id="MAPPED_RESOURCE_TYPE"/>
+                    <datacolumn fieldname="MAPPED_RESOURCE_ID" type="numeric" text="${msg.MAPPED_RESOURCE_ID}" id="MAPPED_RESOURCE_ID"/>
+                    <datacolumn fieldname="RESOUCE_DESCRIPTION" type="string" text="${msg.RESOUCE_DESCRIPTION}" id="RESOUCE_DESCRIPTION"/>
+                    <datacolumn fieldname="RESOURCE_REMARK" type="string" text="${msg.RESOURCE_REMARK}" id="RESOURCE_REMARK"/>
+                    <datacolumn fieldname="RESOURCE_ROAMING_TYPE" type="lookup" lookup="RESOURCE_ROAMING_TYPE_FKLP" text="${msg.RESOURCE_ROAMING_TYPE}" id="RESOURCE_ROAMING_TYPE"/>
+                    <datacolumn fieldname="RESOURCE_DESTINATION" type="string" text="${msg.RESOURCE_DESTINATION}" id="RESOURCE_DESTINATION"/>
+                    <datacolumn fieldname="RESOURCE_FACTOR" type="numeric" text="${msg.RESOURCE_FACTOR}" id="RESOURCE_FACTOR"/>
+                    <datacolumn fieldname="MAXIMUM_VALUE" type="numeric" text="${msg.MAXIMUM_VALUE}" id="MAXIMUM_VALUE"/>
+                    <datacolumn fieldname="INFO1" type="string" text="${msg.INFO1}" id="INFO1"/>
+                    <datacolumn fieldname="INFO2" type="string" text="${msg.INFO2}" id="INFO2"/>
+                    <datacolumn fieldname="INFO3" type="string" text="${msg.INFO3}" id="INFO3"/>
+                    <datacolumn fieldname="OFFER_EXIST1" type="string" text="${msg.OFFER_EXIST1}" id="OFFER_EXIST1"/>
+                    <datacolumn fieldname="OFFER_MUL_FACTOR" type="string" text="${msg.OFFER_MUL_FACTOR}" id="OFFER_MUL_FACTOR"/>
+                    <datacolumn fieldname="INFO4" type="string" text="${msg.INFO4}" id="INFO4"/>
+                    <datacolumn fieldname="INFO5" type="string" text="${msg.INFO5}" id="INFO5"/>
+                    <datacolumn fieldname="INFO6" type="string" text="${msg.INFO6}" id="INFO6"/>
+                    <datacolumn fieldname="INFO7" type="string" text="${msg.INFO7}" id="INFO7"/>
+                    <datacolumn fieldname="INFO8" type="string" text="${msg.INFO8}" id="INFO8"/>
+                    <datacolumn fieldname="INFO9" type="string" text="${msg.INFO9}" id="INFO9"/>
+                    <datacolumn>
+                        <itemtemplate>
+                            <a href="/motcy/csOfferResource/csOfferResourceView.jspx?id=${csOfferResource_item.id}" class="btn btn-mini">
+                                <i class="icon-list-alt icon-black"/>${msg.DETAILS}</a>
+                        </itemtemplate>
+                    </datacolumn>
+                    <datalookup key="OFFER_ID" sql="${sqlExp.CS_OFFER_LOOKUP}" id="OFFER_ID_RESOURCE_FKLP"/>
+                    <datalookup key="RES_TYPE_ID" sql="${sqlExp.CS_RESOURCE_TYPE_LOOKUP}" id="RESOURCE_TYPE_FKLP"/>
+                    <datalookup key="UNIT_ID" sql="${sqlExp.CS_RESOURCE_UNIT_TYPE_LOOKUP}" id="RESOURCE_UNIT_TYPE_FKLP"/>
+                    <datalookup key="TELE_ID" sql="${sqlExp.CS_OFFER_TELESERVICE_LOOKUP}" id="RESOURCE_TELESERVICE_FKLP"/>
+                    <datalookup key="RES_TYPE_ID" sql="${sqlExp.CS_RESOURCE_TYPE_LOOKUP}" id="MAPPED_RESOURCE_TYPE_FKLP"/>
+                    <datalookup key="LOCATION_ID" sql="${sqlExp.CS_OFFER_LOCATION_LOOKUP}" id="RESOURCE_ROAMING_TYPE_FKLP"/>
+                    <datacolumncommand type="edit"/>
+                    <datacolumncommand confirm="${msg.CONFIRM_DELETE}" type="delete"/>
+                    <exporttoexcel rowstoexport="all" filename="CS_OFFER_RESOURCE.xls" command="${msg.SAVE_TO_EXCEL}"/>
+                </datatable>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

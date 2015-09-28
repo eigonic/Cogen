@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page controller="com.bay.da.web.controller.AssetModelEditController" master="/pages/master.jspx">
+	<contentHolder id="mainholder">
+		<form class="well form-horizontal" action="/pages/assetModelEdit.da">
+			<ajaxpanel>
+                <fieldset>
+                    <div class="row">
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="idWC" class="control-label">${msg.ID}</label>
+                                <div class="controls">
+                                    <input type="text" value="${assetModel.id}" id="idWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="nameWC" class="control-label">${msg.NAME}</label>
+                                <div class="controls">
+                                    <input type="text" value="${assetModel.name}" id="nameWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="brandWC" class="control-label">${msg.BRAND}</label>
+                                <div class="controls">
+                                    <select value="${assetModel.brand}" id="brandWC">
+                                        <option>----</option>
+                                        <datalookup datasource="${sql.data_source}" key="ID" value="NAME" sql="${sql.brand_LOOKUP}"/>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="yearWC" class="control-label">${msg.YEAR}</label>
+                                <div class="controls">
+                                    <input type="text" value="${assetModel.year}" id="yearWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="warantyWC" class="control-label">${msg.WARANTY}</label>
+                                <div class="controls">
+                                    <input type="text" value="${assetModel.waranty}" id="warantyWC"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-action">
+                        <input type="button" onserverclick="saveBean" value="${msg.SAVE_CAPTION}" class=" btn-primary"/>
+                    </div>
+                </fieldset>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

@@ -1,0 +1,32 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.motcyCcm.MotcyCcmEditController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/motcyCcm/motcyCcmEdit.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="prodIfWC" class="control-label">${msg.PROD_IF}</label>
+                            <div class="controls">
+                                <select value="${motcyCcm.prodIf}" id="prodIfWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="ID" value="NAME" sql="${sql.MOTCY_PRODUCT_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="ccmWC" class="control-label">${msg.CCM}</label>
+                            <div class="controls">
+                                <input type="text" value="${motcyCcm.ccm}" id="ccmWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="saveBean" class=" btn-primary btn">${msg.SAVE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

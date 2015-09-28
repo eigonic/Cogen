@@ -1,0 +1,58 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.motcyRatePlan.MotcyRatePlanViewController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/motcyRatePlan/motcyRatePlanView.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="codeWC" class="control-label">${msg.CODE}</label>
+                            <div class="controls">${motcyRatePlan.code}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="descrpWC" class="control-label">${msg.DESCRP}</label>
+                            <div class="controls">${motcyRatePlan.descrp}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="scGroupWC" class="control-label">${msg.SC_GROUP}</label>
+                            <div class="controls">${motcyRatePlan.scGroup}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdWC" class="control-label">${msg.CREATED}</label>
+                            <div class="controls">${motcyRatePlan.created}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdByWC" class="control-label">${msg.CREATED_BY}</label>
+                            <div class="controls">${motcyRatePlan.createdBy}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="updatedWC" class="control-label">${msg.UPDATED}</label>
+                            <div class="controls">${motcyRatePlan.updated}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="updatedByWC" class="control-label">${msg.UPDATED_BY}</label>
+                            <div class="controls">${motcyRatePlan.updatedBy}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <a href="/motcy/motcyRatePlan/motcyRatePlanEdit.jspx?code=${motcyRatePlan.code}" class=" btn-primary btn">
+                        <i class="icon-pencil icon-white"/>${msg.EDIT_CAPTION}</a>
+                    <linkcommand confirmation="${msg.CONFIRM_DELETE}" onserverclick="deleteBean" class=" btn-danger btn">
+                        <i class="icon-trash icon-white"/> ${msg.DELETE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

@@ -1,0 +1,29 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csDestination.CsDestinationEditController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csDestination/csDestinationEdit.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="nameWC" class="control-label">${msg.NAME}</label>
+                            <div class="controls">
+                                <input type="text" value="${csDestination.name}" id="nameWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="destinationListWC" class="control-label">${msg.DESTINATION_LIST}</label>
+                            <div class="controls">
+                                <input type="text" value="${csDestination.destinationList}" id="destinationListWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="saveBean" class=" btn-primary btn">${msg.SAVE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

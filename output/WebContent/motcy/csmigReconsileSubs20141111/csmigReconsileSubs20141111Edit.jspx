@@ -1,0 +1,173 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csmigReconsileSubs20141111.CsmigReconsileSubs20141111EditController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csmigReconsileSubs20141111/csmigReconsileSubs20141111Edit.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="msisdnWC" class="control-label">${msg.MSISDN}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSubs20141111.msisdn}" id="msisdnWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="intervalIdWC" class="control-label">${msg.INTERVAL_ID}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSubs20141111.intervalId}" id="intervalIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="extOfferIdWC" class="control-label">${msg.EXT_OFFER_ID}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSubs20141111.extOfferId}" id="extOfferIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="campaignIdWC" class="control-label">${msg.CAMPAIGN_ID}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSubs20141111.campaignId}" id="campaignIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="campaignTypeWC" class="control-label">${msg.CAMPAIGN_TYPE}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSubs20141111.campaignType}" id="campaignTypeWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="startDateWC" class="control-label">${msg.START_DATE}</label>
+                            <div class="controls">
+                                <calendar value="${csmigReconsileSubs20141111.startDate}" id="startDateWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="lastRenewalWC" class="control-label">${msg.LAST_RENEWAL}</label>
+                            <div class="controls">
+                                <calendar value="${csmigReconsileSubs20141111.lastRenewal}" id="lastRenewalWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="nextRenewalWC" class="control-label">${msg.NEXT_RENEWAL}</label>
+                            <div class="controls">
+                                <calendar value="${csmigReconsileSubs20141111.nextRenewal}" id="nextRenewalWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="lastReasonWC" class="control-label">${msg.LAST_REASON}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSubs20141111.lastReason}" id="lastReasonWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="chargingCountWC" class="control-label">${msg.CHARGING_COUNT}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSubs20141111.chargingCount}" id="chargingCountWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="statusWC" class="control-label">${msg.STATUS}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSubs20141111.status}" id="statusWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="csOffer1IdWC" class="control-label">${msg.CS_OFFER1_ID}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSubs20141111.csOffer1Id}" id="csOffer1IdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="csOffer2IdWC" class="control-label">${msg.CS_OFFER2_ID}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSubs20141111.csOffer2Id}" id="csOffer2IdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="limitedServiceWC" class="control-label">${msg.LIMITED_SERVICE}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSubs20141111.limitedService}" id="limitedServiceWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="processStatusWC" class="control-label">${msg.PROCESS_STATUS}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSubs20141111.processStatus}" id="processStatusWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="processorWC" class="control-label">${msg.PROCESSOR}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSubs20141111.processor}" id="processorWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="processDateWC" class="control-label">${msg.PROCESS_DATE}</label>
+                            <div class="controls">
+                                <calendar value="${csmigReconsileSubs20141111.processDate}" id="processDateWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="addonCountWC" class="control-label">${msg.ADDON_COUNT}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSubs20141111.addonCount}" id="addonCountWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="statusUpdatesWC" class="control-label">${msg.STATUS_UPDATES}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSubs20141111.statusUpdates}" id="statusUpdatesWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="sourceWC" class="control-label">${msg.SOURCE}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigReconsileSubs20141111.source}" id="sourceWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="saveBean" class=" btn-primary btn">${msg.SAVE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

@@ -1,0 +1,64 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csOffer.CsOfferViewController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csOffer/csOfferView.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerIdWC" class="control-label">${msg.OFFER_ID}</label>
+                            <div class="controls">${csOffer.offerId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="productNameWC" class="control-label">${msg.PRODUCT_NAME}</label>
+                            <div class="controls">${csOffer.productName}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerTypeWC" class="control-label">${msg.OFFER_TYPE}</label>
+                            <div class="controls">${csOffer.offerType}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdDateWC" class="control-label">${msg.CREATED_DATE}</label>
+                            <div class="controls">${csOffer.createdDate}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="productDescriptionWC" class="control-label">${msg.PRODUCT_DESCRIPTION}</label>
+                            <div class="controls">${csOffer.productDescription}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="roamingTypeWC" class="control-label">${msg.ROAMING_TYPE}</label>
+                            <div class="controls">${csOffer.roamingType}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerTeleserviceWC" class="control-label">${msg.OFFER_TELESERVICE}</label>
+                            <div class="controls">${csOffer.offerTeleservice}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerRemarkWC" class="control-label">${msg.OFFER_REMARK}</label>
+                            <div class="controls">${csOffer.offerRemark}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <a href="/motcy/csOffer/csOfferEdit.jspx?offerId=${csOffer.offerId}" class=" btn-primary btn">
+                        <i class="icon-pencil icon-white"/>${msg.EDIT_CAPTION}</a>
+                    <linkcommand confirmation="${msg.CONFIRM_DELETE}" onserverclick="deleteBean" class=" btn-danger btn">
+                        <i class="icon-trash icon-white"/> ${msg.DELETE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

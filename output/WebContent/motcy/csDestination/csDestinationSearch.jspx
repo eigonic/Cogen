@@ -1,0 +1,46 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csDestination.CsDestinationSearchController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csDestination/csDestinationSearch.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="nameWC" class="control-label">${msg.NAME}</label>
+                            <div class="controls">
+                                <input type="text" id="nameWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="destinationListWC" class="control-label">${msg.DESTINATION_LIST}</label>
+                            <div class="controls">
+                                <input type="text" id="destinationListWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="doSearch" class=" btn-primary btn">${msg.SEARCH_CAPTION}</linkcommand>
+                    <hr/>
+                </div>
+                <datatable datasource="${sqlExp.data_source}" var="csDestination_item" casesensitive="true" table="CS_DESTINATION" showrowindex="true" autobind="true" noresults="${msg.NO_RESULTS}" sql="${sql.CS_DESTINATION_SEARCH}">
+                    <dataparam control="nameWC" expression="${sqlExp.CS_DESTINATION_NAME}"/>
+                    <dataparam control="destinationListWC" expression="${sqlExp.CS_DESTINATION_DESTINATION_LIST}"/>
+                    <datapk name="DESTINATION_LIST"/>
+                    <datacolumn fieldname="NAME" type="string" text="${msg.NAME}" id="NAME"/>
+                    <datacolumn fieldname="DESTINATION_LIST" type="string" text="${msg.DESTINATION_LIST}" id="DESTINATION_LIST"/>
+                    <datacolumn>
+                        <itemtemplate>
+                            <a href="/motcy/csDestination/csDestinationView.jspx?id=${csDestination_item.id}" class="btn btn-mini">
+                                <i class="icon-list-alt icon-black"/>${msg.DETAILS}</a>
+                        </itemtemplate>
+                    </datacolumn>
+                    <datacolumncommand type="edit"/>
+                    <datacolumncommand confirm="${msg.CONFIRM_DELETE}" type="delete"/>
+                    <exporttoexcel rowstoexport="all" filename="CS_DESTINATION.xls" command="${msg.SAVE_TO_EXCEL}"/>
+                </datatable>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

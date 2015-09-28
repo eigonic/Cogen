@@ -1,0 +1,118 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csOffer.CsOfferSearchController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csOffer/csOfferSearch.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerIdWC" class="control-label">${msg.OFFER_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="offerIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="productNameWC" class="control-label">${msg.PRODUCT_NAME}</label>
+                            <div class="controls">
+                                <input type="text" id="productNameWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerTypeWC" class="control-label">${msg.OFFER_TYPE}</label>
+                            <div class="controls">
+                                <select id="offerTypeWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="OFFER_TYPE_ID" value="NAME" sql="${sql.CS_OFFER_TYPE_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdDateWC" class="control-label">${msg.CREATED_DATE}</label>
+                            <div class="controls">
+                                <calendar id="createdDateWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="productDescriptionWC" class="control-label">${msg.PRODUCT_DESCRIPTION}</label>
+                            <div class="controls">
+                                <input type="text" id="productDescriptionWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="roamingTypeWC" class="control-label">${msg.ROAMING_TYPE}</label>
+                            <div class="controls">
+                                <select id="roamingTypeWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="LOCATION_ID" value="NAME" sql="${sql.CS_OFFER_LOCATION_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerTeleserviceWC" class="control-label">${msg.OFFER_TELESERVICE}</label>
+                            <div class="controls">
+                                <select id="offerTeleserviceWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="TELE_ID" value="NAME" sql="${sql.CS_OFFER_TELESERVICE_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerRemarkWC" class="control-label">${msg.OFFER_REMARK}</label>
+                            <div class="controls">
+                                <input type="text" id="offerRemarkWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="doSearch" class=" btn-primary btn">${msg.SEARCH_CAPTION}</linkcommand>
+                    <hr/>
+                </div>
+                <datatable datasource="${sqlExp.data_source}" var="csOffer_item" casesensitive="true" table="CS_OFFER" showrowindex="true" autobind="true" noresults="${msg.NO_RESULTS}" sql="${sql.CS_OFFER_SEARCH}">
+                    <dataparam control="offerIdWC" expression="${sqlExp.CS_OFFER_OFFER_ID}"/>
+                    <dataparam control="productNameWC" expression="${sqlExp.CS_OFFER_PRODUCT_NAME}"/>
+                    <dataparam control="offerTypeWC" expression="${sqlExp.CS_OFFER_OFFER_TYPE}"/>
+                    <dataparam control="createdDateWC" expression="${sqlExp.CS_OFFER_CREATED_DATE}"/>
+                    <dataparam control="productDescriptionWC" expression="${sqlExp.CS_OFFER_PRODUCT_DESCRIPTION}"/>
+                    <dataparam control="roamingTypeWC" expression="${sqlExp.CS_OFFER_ROAMING_TYPE}"/>
+                    <dataparam control="offerTeleserviceWC" expression="${sqlExp.CS_OFFER_OFFER_TELESERVICE}"/>
+                    <dataparam control="offerRemarkWC" expression="${sqlExp.CS_OFFER_OFFER_REMARK}"/>
+                    <datapk name="OFFER_ID"/>
+                    <datacolumn fieldname="OFFER_ID" type="numeric" text="${msg.OFFER_ID}" id="OFFER_ID"/>
+                    <datacolumn fieldname="PRODUCT_NAME" type="string" text="${msg.PRODUCT_NAME}" id="PRODUCT_NAME"/>
+                    <datacolumn fieldname="OFFER_TYPE" type="lookup" lookup="OFFER_TYPE_FKLP" text="${msg.OFFER_TYPE}" id="OFFER_TYPE"/>
+                    <datacolumn fieldname="CREATED_DATE" type="date" text="${msg.CREATED_DATE}" id="CREATED_DATE"/>
+                    <datacolumn fieldname="PRODUCT_DESCRIPTION" type="string" text="${msg.PRODUCT_DESCRIPTION}" id="PRODUCT_DESCRIPTION"/>
+                    <datacolumn fieldname="ROAMING_TYPE" type="lookup" lookup="ROAMING_TYPE_FKLP" text="${msg.ROAMING_TYPE}" id="ROAMING_TYPE"/>
+                    <datacolumn fieldname="OFFER_TELESERVICE" type="lookup" lookup="OFFER_TELESERVICE_FKLP" text="${msg.OFFER_TELESERVICE}" id="OFFER_TELESERVICE"/>
+                    <datacolumn fieldname="OFFER_REMARK" type="string" text="${msg.OFFER_REMARK}" id="OFFER_REMARK"/>
+                    <datacolumn>
+                        <itemtemplate>
+                            <a href="/motcy/csOffer/csOfferView.jspx?id=${csOffer_item.id}" class="btn btn-mini">
+                                <i class="icon-list-alt icon-black"/>${msg.DETAILS}</a>
+                        </itemtemplate>
+                    </datacolumn>
+                    <datalookup key="OFFER_TYPE_ID" sql="${sqlExp.CS_OFFER_TYPE_LOOKUP}" id="OFFER_TYPE_FKLP"/>
+                    <datalookup key="LOCATION_ID" sql="${sqlExp.CS_OFFER_LOCATION_LOOKUP}" id="ROAMING_TYPE_FKLP"/>
+                    <datalookup key="TELE_ID" sql="${sqlExp.CS_OFFER_TELESERVICE_LOOKUP}" id="OFFER_TELESERVICE_FKLP"/>
+                    <datacolumncommand type="edit"/>
+                    <datacolumncommand confirm="${msg.CONFIRM_DELETE}" type="delete"/>
+                    <exporttoexcel rowstoexport="all" filename="CS_OFFER.xls" command="${msg.SAVE_TO_EXCEL}"/>
+                </datatable>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

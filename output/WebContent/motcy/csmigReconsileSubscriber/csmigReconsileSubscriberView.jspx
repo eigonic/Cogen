@@ -1,0 +1,63 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csmigReconsileSubscriber.CsmigReconsileSubscriberViewController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csmigReconsileSubscriber/csmigReconsileSubscriberView.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="msisdnWC" class="control-label">${msg.MSISDN}</label>
+                            <div class="controls">${csmigReconsileSubscriber.msisdn}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="statusWC" class="control-label">${msg.STATUS}</label>
+                            <div class="controls">${csmigReconsileSubscriber.status}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="typeWC" class="control-label">${msg.TYPE}</label>
+                            <div class="controls">${csmigReconsileSubscriber.type}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="pkgCountWC" class="control-label">${msg.PKG_COUNT}</label>
+                            <div class="controls">${csmigReconsileSubscriber.pkgCount}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="processorWC" class="control-label">${msg.PROCESSOR}</label>
+                            <div class="controls">${csmigReconsileSubscriber.processor}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="completedWC" class="control-label">${msg.COMPLETED}</label>
+                            <div class="controls">${csmigReconsileSubscriber.completed}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="failReasonWC" class="control-label">${msg.FAIL_REASON}</label>
+                            <div class="controls">${csmigReconsileSubscriber.failReason}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="failMsgWC" class="control-label">${msg.FAIL_MSG}</label>
+                            <div class="controls">${csmigReconsileSubscriber.failMsg}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <a class=" btn-primary btn"/>
+                    <linkcommand confirmation="${msg.CONFIRM_DELETE}" onserverclick="deleteBean" class=" btn-danger btn">
+                        <i class="icon-trash icon-white"/> ${msg.DELETE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

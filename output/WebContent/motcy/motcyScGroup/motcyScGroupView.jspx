@@ -1,0 +1,28 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.motcyScGroup.MotcyScGroupViewController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/motcyScGroup/motcyScGroupView.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="idWC" class="control-label">${msg.ID}</label>
+                            <div class="controls">${motcyScGroup.id}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="nameWC" class="control-label">${msg.NAME}</label>
+                            <div class="controls">${motcyScGroup.name}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <a href="/motcy/motcyScGroup/motcyScGroupEdit.jspx?id=${motcyScGroup.id}" class=" btn-primary btn">
+                        <i class="icon-pencil icon-white"/>${msg.EDIT_CAPTION}</a>
+                    <linkcommand confirmation="${msg.CONFIRM_DELETE}" onserverclick="deleteBean" class=" btn-danger btn">
+                        <i class="icon-trash icon-white"/> ${msg.DELETE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

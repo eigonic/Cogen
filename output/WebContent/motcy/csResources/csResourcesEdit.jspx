@@ -1,0 +1,67 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csResources.CsResourcesEditController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csResources/csResourcesEdit.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="idWC" class="control-label">${msg.ID}</label>
+                            <div class="controls">
+                                <input type="text" value="${csResources.id}" id="idWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="serviceClassWC" class="control-label">${msg.SERVICE_CLASS}</label>
+                            <div class="controls">
+                                <select value="${csResources.serviceClass}" id="serviceClassWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="ID" value="NAME" sql="${sql.CS_SERVICE_CLASS_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="nameWC" class="control-label">${msg.NAME}</label>
+                            <div class="controls">
+                                <input type="text" value="${csResources.name}" id="nameWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceTypeIdWC" class="control-label">${msg.RESOURCE_TYPE_ID}</label>
+                            <div class="controls">
+                                <select value="${csResources.resourceTypeId}" id="resourceTypeIdWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="RES_TYPE_ID" value="NAME" sql="${sql.CS_RESOURCE_TYPE_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="recIdWC" class="control-label">${msg.REC_ID}</label>
+                            <div class="controls">
+                                <input type="text" value="${csResources.recId}" id="recIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="maskWC" class="control-label">${msg.MASK}</label>
+                            <div class="controls">
+                                <input type="text" value="${csResources.mask}" id="maskWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="saveBean" class=" btn-primary btn">${msg.SAVE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

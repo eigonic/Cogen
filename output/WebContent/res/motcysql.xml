@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="CSMIG_CONFIG_TMP_SEARCH">
+<![CDATA[
+SELECT C.* 
+    FROM CSMIG_CONFIG_TMP C 
+    WHERE #C.ID = ?# AND #C.MDSP_PKG LIKE '%?%'# AND #C.CS_OFFER_ID = ?# 
+        AND #C.CS_UC_ID = ?# AND #C.ESDP_OFFER_ID = ?# AND 
+        #C.ESDP_CAMPAIGN_ID = ?# AND #C.CS_MIGRATOR LIKE '%?%'# AND 
+        #C.ESDP_MIGRATOR LIKE '%?%'# AND #C.EXT_OFFER_ID LIKE '%?%'# 
+        AND #C.RATEPLAN_ID LIKE '%?%'# AND #C.SERVICE_ID LIKE '%?%'# 
+        AND #C.ALLOW_MULTI LIKE '%?%'# AND #C.OFFER_GROUP LIKE '%?%'# 
+        AND #C.PACKAGE_ID LIKE '%?%'# AND #C.CS_OFFER_ID2 = ?# AND 
+        #C.NAME LIKE '%?%'# AND #C.ALLOWANCE LIKE '%?%'# 
+]]>
+</entry>
+    <entry key="CSMIG_PKG_STATUS_SEARCH">
+<![CDATA[
+SELECT C.* 
+    FROM CSMIG_PKG_STATUS C 
+    WHERE #C.ID = ?# AND #C.NAME LIKE '%?%'# AND #C.DESCRIPTION LIKE '%?%'# 
+        AND #C.RECONSILE = ?# 
+]]>
+</entry>
+    <entry key="CSMIG_RECONSILE_SUBSCRIBER_SEARCH">
+<![CDATA[
+SELECT C.* 
+    FROM CSMIG_RECONSILE_SUBSCRIBER C 
+    WHERE #C.MSISDN = ?# AND #C.STATUS = ?# AND #C.TYPE = ?# AND 
+        #C.PKG_COUNT = ?# AND #C.PROCESSOR = ?# AND #C.COMPLETED = ?# 
+        AND #C.FAIL_REASON = ?# AND #C.FAIL_MSG LIKE '%?%'# 
+]]>
+</entry>
+    <entry key="CSMIG_RECONSILE_SUBSCRIPTION_SEARCH">
+<![CDATA[
+SELECT C.* 
+    FROM CSMIG_RECONSILE_SUBSCRIPTION C 
+    WHERE #C.MSISDN = ?# AND #C.INTERVAL_ID = ?# AND #C.EXT_OFFER_ID LIKE 
+        '%?%'# AND #C.CAMPAIGN_ID = ?# AND #C.CAMPAIGN_TYPE LIKE '%?%'# 
+        AND #C.START_DATE = ?# AND #C.LAST_RENEWAL = ?# AND 
+        #C.NEXT_RENEWAL = ?# AND #C.LAST_REASON = ?# AND 
+        #C.CHARGING_COUNT = ?# AND #C.STATUS = ?# AND #C.CS_OFFER1_ID = 
+        ?# AND #C.CS_OFFER2_ID = ?# AND #C.LIMITED_SERVICE LIKE '%?%'# 
+        AND #C.PROCESS_STATUS = ?# AND #C.PROCESSOR = ?# AND 
+        #C.PROCESS_DATE = ?# AND #C.ADDON_COUNT = ?# AND 
+        #C.STATUS_UPDATES LIKE '%?%'# AND #C.SOURCE LIKE '%?%'# 
+]]>
+</entry>
+    <entry key="CSMIG_RECONSILE_SUBS_201411112_SEARCH">
+<![CDATA[
+SELECT C.* 
+    FROM CSMIG_RECONSILE_SUBS_201411112 C 
+    WHERE #C.MSISDN = ?# AND #C.INTERVAL_ID = ?# AND #C.EXT_OFFER_ID LIKE 
+        '%?%'# AND #C.CAMPAIGN_ID = ?# AND #C.CAMPAIGN_TYPE LIKE '%?%'# 
+        AND #C.START_DATE = ?# AND #C.LAST_RENEWAL = ?# AND 
+        #C.NEXT_RENEWAL = ?# AND #C.LAST_REASON = ?# AND 
+        #C.CHARGING_COUNT = ?# AND #C.STATUS = ?# AND #C.CS_OFFER1_ID = 
+        ?# AND #C.CS_OFFER2_ID = ?# AND #C.LIMITED_SERVICE LIKE '%?%'# 
+        AND #C.PROCESS_STATUS = ?# AND #C.PROCESSOR = ?# AND 
+        #C.PROCESS_DATE = ?# AND #C.ADDON_COUNT = ?# AND 
+        #C.STATUS_UPDATES LIKE '%?%'# AND #C.SOURCE LIKE '%?%'# 
+]]>
+</entry>
+    <entry key="CSMIG_RECONSILE_SUBS_20141111_SEARCH">
+<![CDATA[
+SELECT C.* 
+    FROM CSMIG_RECONSILE_SUBS_20141111 C 
+    WHERE #C.MSISDN = ?# AND #C.INTERVAL_ID = ?# AND #C.EXT_OFFER_ID LIKE 
+        '%?%'# AND #C.CAMPAIGN_ID = ?# AND #C.CAMPAIGN_TYPE LIKE '%?%'# 
+        AND #C.START_DATE = ?# AND #C.LAST_RENEWAL = ?# AND 
+        #C.NEXT_RENEWAL = ?# AND #C.LAST_REASON = ?# AND 
+        #C.CHARGING_COUNT = ?# AND #C.STATUS = ?# AND #C.CS_OFFER1_ID = 
+        ?# AND #C.CS_OFFER2_ID = ?# AND #C.LIMITED_SERVICE LIKE '%?%'# 
+        AND #C.PROCESS_STATUS = ?# AND #C.PROCESSOR = ?# AND 
+        #C.PROCESS_DATE = ?# AND #C.ADDON_COUNT = ?# AND 
+        #C.STATUS_UPDATES LIKE '%?%'# AND #C.SOURCE LIKE '%?%'# 
+]]>
+</entry>
+    <entry key="CSMIG_RECONSILE_SUB_20141111_SEARCH">
+<![CDATA[
+SELECT C.* 
+    FROM CSMIG_RECONSILE_SUB_20141111 C 
+    WHERE #C.MSISDN = ?# AND #C.STATUS = ?# AND #C.TYPE = ?# AND 
+        #C.PKG_COUNT = ?# AND #C.PROCESSOR = ?# AND #C.COMPLETED = ?# 
+        AND #C.FAIL_REASON = ?# AND #C.FAIL_MSG LIKE '%?%'# 
+]]>
+</entry>
+    <entry key="CS_DESTINATION_SEARCH">
+<![CDATA[
+SELECT C.* 
+    FROM CS_DESTINATION C 
+    WHERE #C.NAME LIKE '%?%'# AND #C.DESTINATION_LIST LIKE '%?%'# 
+]]>
+</entry>
+    <entry key="CS_OFFER_BAC_1_APR_SEARCH">
+<![CDATA[
+SELECT C.* 
+    FROM CS_OFFER_BAC_1_APR C 
+    WHERE #C.OFFER_ID = ?# AND #C.PRODUCT_NAME LIKE '%?%'# AND 
+        #C.OFFER_TYPE = ?# AND #C.CREATED_DATE = ?# AND 
+        #C.PRODUCT_DESCRIPTION LIKE '%?%'# AND #C.ROAMING_TYPE LIKE 
+        '%?%'# AND #C.OFFER_TELESERVICE LIKE '%?%'# AND #C.OFFER_REMARK 
+        LIKE '%?%'# 
+]]>
+</entry>
+    <entry key="CS_OFFER_LOCATION_LOOKUP">
+<![CDATA[
+SELECT * 
+    FROM CS_OFFER_LOCATION 
+]]>
+</entry>
+    <entry key="CS_OFFER_LOCATION_SEARCH">
+<![CDATA[
+SELECT C.* 
+    FROM CS_OFFER_LOCATION C 
+    WHERE #C.NAME LIKE '%?%'# AND #C.LOCATION_ID LIKE '%?%'# AND #C.ID = ?# 
+]]>
+</entry>
+    <entry key="CS_OFFER_LOOKUP">
+<![CDATA[
+SELECT * 
+    FROM CS_OFFER 
+]]>
+</entry>
+    <entry key="CS_OFFER_RESOURCE_SEARCH">
+<![CDATA[
+SELECT C.* 
+    FROM CS_OFFER_RESOURCE C 
+    WHERE #C.ID = ?# AND #C.OFFER_ID_RESOURCE = ?# AND #C.RESOURCE_TYPE 
+        LIKE '%?%'# AND #C.RESOURCE_ID = ?# AND #C.RESOURCE_UNIT_TYPE 
+        LIKE '%?%'# AND #C.RESOURCE_TELESERVICE LIKE '%?%'# AND 
+        #C.APN_VALUE LIKE '%?%'# AND #C.MAPPED_RESOURCE_TYPE LIKE 
+        '%?%'# AND #C.MAPPED_RESOURCE_ID = ?# AND 
+        #C.RESOUCE_DESCRIPTION LIKE '%?%'# AND #C.RESOURCE_REMARK LIKE 
+        '%?%'# AND #C.RESOURCE_ROAMING_TYPE LIKE '%?%'# AND 
+        #C.RESOURCE_DESTINATION LIKE '%?%'# AND #C.RESOURCE_FACTOR = ?# 
+        AND #C.MAXIMUM_VALUE = ?# AND #C.INFO1 LIKE '%?%'# AND #C.INFO2 
+        LIKE '%?%'# AND #C.INFO3 LIKE '%?%'# AND #C.OFFER_EXIST1 LIKE 
+        '%?%'# AND #C.OFFER_MUL_FACTOR LIKE '%?%'# AND #C.INFO4 LIKE 
+        '%?%'# AND #C.INFO5 LIKE '%?%'# AND #C.INFO6 LIKE '%?%'# AND 
+        #C.INFO7 LIKE '%?%'# AND #C.INFO8 LIKE '%?%'# AND #C.INFO9 LIKE 
+        '%?%'# 
+]]>
+</entry>
+    <entry key="CS_OFFER_SEARCH">
+<![CDATA[
+SELECT C.* 
+    FROM CS_OFFER C 
+    WHERE #C.OFFER_ID = ?# AND #C.PRODUCT_NAME LIKE '%?%'# AND 
+        #C.OFFER_TYPE = ?# AND #C.CREATED_DATE = ?# AND 
+        #C.PRODUCT_DESCRIPTION LIKE '%?%'# AND #C.ROAMING_TYPE LIKE 
+        '%?%'# AND #C.OFFER_TELESERVICE LIKE '%?%'# AND #C.OFFER_REMARK 
+        LIKE '%?%'# 
+]]>
+</entry>
+    <entry key="CS_OFFER_TELESERVICE_LOOKUP">
+<![CDATA[
+SELECT * 
+    FROM CS_OFFER_TELESERVICE 
+]]>
+</entry>
+    <entry key="CS_OFFER_TELESERVICE_SEARCH">
+<![CDATA[
+SELECT C.* 
+    FROM CS_OFFER_TELESERVICE C 
+    WHERE #C.NAME LIKE '%?%'# AND #C.TELE_ID LIKE '%?%'# AND #C.ID = ?# 
+]]>
+</entry>
+    <entry key="CS_OFFER_TYPE_LOOKUP">
+<![CDATA[
+SELECT * 
+    FROM CS_OFFER_TYPE 
+]]>
+</entry>
+    <entry key="CS_OFFER_TYPE_SEARCH">
+<![CDATA[
+SELECT C.* 
+    FROM CS_OFFER_TYPE C 
+    WHERE #C.OFFER_TYPE_ID = ?# AND #C.OFFER_TYPE_NAME LIKE '%?%'# 
+]]>
+</entry>
+    <entry key="CS_RESOURCES_SEARCH">
+<![CDATA[
+SELECT C.* 
+    FROM CS_RESOURCES C 
+    WHERE #C.ID LIKE '%?%'# AND #C.SERVICE_CLASS LIKE '%?%'# AND #C.NAME 
+        LIKE '%?%'# AND #C.RESOURCE_TYPE_ID LIKE '%?%'# AND #C.REC_ID = 
+        ?# AND #C.MASK LIKE '%?%'# 
+]]>
+</entry>
+    <entry key="CS_RESOURCE_BAC_1_APR_SEARCH">
+<![CDATA[
+SELECT C.* 
+    FROM CS_RESOURCE_BAC_1_APR C 
+    WHERE #C.ID = ?# AND #C.OFFER_ID_RESOURCE = ?# AND #C.RESOURCE_TYPE 
+        LIKE '%?%'# AND #C.RESOURCE_ID = ?# AND #C.RESOURCE_UNIT_TYPE 
+        LIKE '%?%'# AND #C.RESOURCE_TELESERVICE LIKE '%?%'# AND 
+        #C.APN_VALUE LIKE '%?%'# AND #C.MAPPED_RESOURCE_TYPE LIKE 
+        '%?%'# AND #C.MAPPED_RESOURCE_ID = ?# AND 
+        #C.RESOUCE_DESCRIPTION LIKE '%?%'# AND #C.RESOURCE_REMARK LIKE 
+        '%?%'# AND #C.RESOURCE_ROAMING_TYPE LIKE '%?%'# AND 
+        #C.RESOURCE_DESTINATION LIKE '%?%'# AND #C.RESOURCE_FACTOR = ?# 
+        AND #C.MAXIMUM_VALUE = ?# AND #C.INFO1 LIKE '%?%'# AND #C.INFO2 
+        LIKE '%?%'# AND #C.INFO3 LIKE '%?%'# 
+]]>
+</entry>
+    <entry key="CS_RESOURCE_TYPE_LOOKUP">
+<![CDATA[
+SELECT * 
+    FROM CS_RESOURCE_TYPE 
+]]>
+</entry>
+    <entry key="CS_RESOURCE_TYPE_SEARCH">
+<![CDATA[
+SELECT C.* 
+    FROM CS_RESOURCE_TYPE C 
+    WHERE #C.NAME LIKE '%?%'# AND #C.RES_TYPE_ID LIKE '%?%'# AND #C.ID = ?# 
+]]>
+</entry>
+    <entry key="CS_RESOURCE_UNIT_TYPE_LOOKUP">
+<![CDATA[
+SELECT * 
+    FROM CS_RESOURCE_UNIT_TYPE 
+]]>
+</entry>
+    <entry key="CS_RESOURCE_UNIT_TYPE_SEARCH">
+<![CDATA[
+SELECT C.* 
+    FROM CS_RESOURCE_UNIT_TYPE C 
+    WHERE #C.NAME LIKE '%?%'# AND #C.UNIT_ID LIKE '%?%'# AND #C.ID = ?# 
+]]>
+</entry>
+    <entry key="CS_SERVICE_CLASS_LOOKUP">
+<![CDATA[
+SELECT * 
+    FROM CS_SERVICE_CLASS 
+]]>
+</entry>
+    <entry key="CS_SERVICE_CLASS_SEARCH">
+<![CDATA[
+SELECT C.* 
+    FROM CS_SERVICE_CLASS C 
+    WHERE #C.ID LIKE '%?%'# AND #C.NAME LIKE '%?%'# 
+]]>
+</entry>
+    <entry key="IN_DUMP_SEARCH">
+<![CDATA[
+SELECT I.* 
+    FROM IN_DUMP I 
+    WHERE #I.OFFER_ID = ?# AND #I.PRODUCT_NAME LIKE '%?%'# AND 
+        #I.OFFER_TYPE = ?# AND #I.CREATED_DATE = ?# AND 
+        #I.PRODUCT_DESCRIPTION LIKE '%?%'# AND #I.ROAMING_TYPE LIKE 
+        '%?%'# AND #I.OFFER_TELESERVICE LIKE '%?%'# AND #I.OFFER_REMARK 
+        LIKE '%?%'# AND #I.ID = ?# AND #I.OFFER_ID_RESOURCE = ?# AND 
+        #I.RESOURCE_TYPE LIKE '%?%'# AND #I.RESOURCE_ID = ?# AND 
+        #I.RESOURCE_UNIT_TYPE LIKE '%?%'# AND #I.RESOURCE_TELESERVICE 
+        LIKE '%?%'# AND #I.APN_VALUE LIKE '%?%'# AND 
+        #I.MAPPED_RESOURCE_TYPE LIKE '%?%'# AND #I.MAPPED_RESOURCE_ID = 
+        ?# AND #I.RESOUCE_DESCRIPTION LIKE '%?%'# AND 
+        #I.RESOURCE_REMARK LIKE '%?%'# AND #I.RESOURCE_ROAMING_TYPE 
+        LIKE '%?%'# AND #I.RESOURCE_DESTINATION LIKE '%?%'# AND 
+        #I.RESOURCE_FACTOR = ?# AND #I.MAXIMUM_VALUE = ?# AND #I.INFO1 
+        LIKE '%?%'# AND #I.INFO2 LIKE '%?%'# AND #I.INFO3 LIKE '%?%'# 
+]]>
+</entry>
+    <entry key="MOTCY_BUCKET_ITEM_BUCKET_SEARCH">
+<![CDATA[
+SELECT M.* 
+    FROM MOTCY_BUCKET_ITEM_BUCKET M 
+    WHERE #M.BUCKET_ID = ?# AND #M.ITEM_ID = ?# AND #M.CREATED = ?# AND 
+        #M.CREATED_BY = ?# AND #M.UDPATED = ?# AND #M.UDPATED_BY = ?# 
+]]>
+</entry>
+    <entry key="MOTCY_BUCKET_ITEM_LOOKUP">
+<![CDATA[
+SELECT * 
+    FROM MOTCY_BUCKET_ITEM 
+]]>
+</entry>
+    <entry key="MOTCY_BUCKET_ITEM_RES_SEARCH">
+<![CDATA[
+SELECT M.* 
+    FROM MOTCY_BUCKET_ITEM_RES M 
+    WHERE #M.ITEM_ID = ?# AND #M.RES_ID = ?# AND #M.CREATED = ?# AND 
+        #M.CREATED_BY = ?# AND #M.UDPATED = ?# AND #M.UDPATED_BY = ?# 
+]]>
+</entry>
+    <entry key="MOTCY_BUCKET_ITEM_SEARCH">
+<![CDATA[
+SELECT M.* 
+    FROM MOTCY_BUCKET_ITEM M 
+    WHERE #M.ID = ?# AND #M.NAME LIKE '%?%'# AND #M.CREATED = ?# AND 
+        #M.CREATED_BY = ?# AND #M.UDPATED = ?# AND #M.UDPATED_BY = ?# 
+        AND #M.STATUS = ?# AND #M.DESCRIPTION LIKE '%?%'# AND #M.REMARK 
+        LIKE '%?%'# 
+]]>
+</entry>
+    <entry key="MOTCY_BUCKET_LOOKUP">
+<![CDATA[
+SELECT * 
+    FROM MOTCY_BUCKET 
+]]>
+</entry>
+    <entry key="MOTCY_BUCKET_SEARCH">
+<![CDATA[
+SELECT M.* 
+    FROM MOTCY_BUCKET M 
+    WHERE #M.ID = ?# AND #M.OFFER_ID = ?# AND #M.TELESERVICE LIKE '%?%'# 
+        AND #M.CREATED = ?# AND #M.CREATED_BY = ?# AND #M.UDPATED = ?# 
+        AND #M.UDPATED_BY = ?# AND #M.STATUS = ?# AND #M.ROAMING_TYPE 
+        LIKE '%?%'# 
+]]>
+</entry>
+    <entry key="MOTCY_PRODUCT_BUCKET_SEARCH">
+<![CDATA[
+SELECT M.* 
+    FROM MOTCY_PRODUCT_BUCKET M 
+    WHERE #M.PROD_ID = ?# AND #M.BUCKET_ID = ?# AND #M.CREATED = ?# AND 
+        #M.CREATED_BY = ?# AND #M.UDPATED = ?# AND #M.UDPATED_BY = ?# 
+]]>
+</entry>
+    <entry key="MOTCY_PRODUCT_FF_SEARCH">
+<![CDATA[
+SELECT M.* 
+    FROM MOTCY_PRODUCT_FF M 
+    WHERE #M.PROD_ID = ?# AND #M.BUCKET_ID = ?# AND #M.ITEM_ID = ?# AND 
+        #M.RES_ID = ?# AND #M.VALUE LIKE '%?%'# AND #M.CREATED = ?# AND 
+        #M.CREATED_BY = ?# AND #M.UDPATED = ?# AND #M.UDPATED_BY = ?# 
+]]>
+</entry>
+    <entry key="MOTCY_PRODUCT_LOOKUP">
+<![CDATA[
+SELECT * 
+    FROM MOTCY_PRODUCT 
+]]>
+</entry>
+    <entry key="MOTCY_PRODUCT_SEARCH">
+<![CDATA[
+SELECT M.* 
+    FROM MOTCY_PRODUCT M 
+    WHERE #M.ID = ?# AND #M.NAME LIKE '%?%'# AND #M.OFFER_ID = ?# AND 
+        #M.RATEPLAN = ?# AND #M.CREATED = ?# AND #M.CREATED_BY = ?# AND 
+        #M.UDPATED = ?# AND #M.UDPATED_BY = ?# AND #M.STATUS = ?# AND 
+        #M.DESCRIPTION LIKE '%?%'# AND #M.CMM_ID = ?# 
+]]>
+</entry>
+    <entry key="MOTCY_RESOURCE_LOOKUP">
+<![CDATA[
+SELECT * 
+    FROM MOTCY_RESOURCE 
+]]>
+</entry>
+    <entry key="MOTCY_RESOURCE_SEARCH">
+<![CDATA[
+SELECT M.* 
+    FROM MOTCY_RESOURCE M 
+    WHERE #M.ID = ?# AND #M.NAME LIKE '%?%'# AND #M.TYPE = ?# AND #M.UNIT = 
+        ?# AND #M.DEFAULT_VAL LIKE '%?%'# AND #M.CREATED = ?# AND 
+        #M.CREATED_BY = ?# AND #M.UDPATED = ?# AND #M.UDPATED_BY = ?# 
+        AND #M.STATUS = ?# AND #M.SC_GROUP LIKE '%?%'# AND 
+        #M.RESOURCE_ID = ?# 
+]]>
+</entry>
+    <entry key="MOTCY_RES_TYPE_LOOKUP">
+<![CDATA[
+SELECT * 
+    FROM MOTCY_RES_TYPE 
+]]>
+</entry>
+    <entry key="MOTCY_RES_TYPE_SEARCH">
+<![CDATA[
+SELECT M.* 
+    FROM MOTCY_RES_TYPE M 
+    WHERE #M.ID = ?# AND #M.NAME LIKE '%?%'# 
+]]>
+</entry>
+    <entry key="MOTCY_SC_GROUP_SEARCH">
+<![CDATA[
+SELECT M.* 
+    FROM MOTCY_SC_GROUP M 
+    WHERE #M.ID = ?# AND #M.NAME LIKE '%?%'# 
+]]>
+</entry>
+    <entry key="MOTCY_SERVICE_CLASS_SEARCH">
+<![CDATA[
+SELECT M.* 
+    FROM MOTCY_SERVICE_CLASS M 
+    WHERE #M.ID = ?# AND #M.NAME LIKE '%?%'# AND #M.SC_GROUP = ?# 
+]]>
+</entry>
+    <entry key="MOTCY_UNIT_TYPE_LOOKUP">
+<![CDATA[
+SELECT * 
+    FROM MOTCY_UNIT_TYPE 
+]]>
+</entry>
+    <entry key="MOTCY_UNIT_TYPE_SEARCH">
+<![CDATA[
+SELECT M.* 
+    FROM MOTCY_UNIT_TYPE M 
+    WHERE #M.ID = ?# AND #M.NAME LIKE '%?%'# 
+]]>
+</entry>
+</properties>

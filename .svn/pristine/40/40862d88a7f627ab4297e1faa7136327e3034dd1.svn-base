@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page controller="com.bay.da.web.controller.BrandViewController" master="/pages/master.jspx">
+	<contentHolder id="mainholder">
+		<form class="well form-horizontal" action="/pages/brandView.da">
+			<ajaxpanel>
+                <fieldset>
+                    <div class="row">
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="idWC" class="control-label">${msg.ID}</label>
+                                <div class="controls">
+                                    <label for="" class="control-label">${brand.id}</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="nameWC" class="control-label">${msg.NAME}</label>
+                                <div class="controls">
+                                    <label for="" class="control-label">${brand.name}</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="companyWC" class="control-label">${msg.COMPANY}</label>
+                                <div class="controls">
+                                    <label for="" class="control-label">${brand.company}</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="depRatioWC" class="control-label">${msg.DEP_RATIO}</label>
+                                <div class="controls">
+                                    <label for="" class="control-label">${brand.depRatio}</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="typeWC" class="control-label">${msg.TYPE}</label>
+                                <div class="controls">
+                                    <label for="" class="control-label">${brand.type}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-action">
+                        <a href="/pages/brandEdit.da?id=${brand.id}" class=" btn-primary btn">EDIT_CAPTION</a>
+                        <linkcommand confirmation="${msg.CONFIRM_DELETE}" onserverclick="deleteBean" class=" btn-danger btn">
+                            <i class="icon-trash icon-white"/> ${msg.DELETE_CAPTION}</linkcommand>
+                    </div>
+                </fieldset>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

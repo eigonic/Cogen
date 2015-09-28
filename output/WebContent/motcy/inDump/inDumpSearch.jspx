@@ -1,0 +1,285 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.inDump.InDumpSearchController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/inDump/inDumpSearch.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerIdWC" class="control-label">${msg.OFFER_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="offerIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="productNameWC" class="control-label">${msg.PRODUCT_NAME}</label>
+                            <div class="controls">
+                                <input type="text" id="productNameWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerTypeWC" class="control-label">${msg.OFFER_TYPE}</label>
+                            <div class="controls">
+                                <input type="text" id="offerTypeWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdDateWC" class="control-label">${msg.CREATED_DATE}</label>
+                            <div class="controls">
+                                <calendar id="createdDateWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="productDescriptionWC" class="control-label">${msg.PRODUCT_DESCRIPTION}</label>
+                            <div class="controls">
+                                <input type="text" id="productDescriptionWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="roamingTypeWC" class="control-label">${msg.ROAMING_TYPE}</label>
+                            <div class="controls">
+                                <input type="text" id="roamingTypeWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerTeleserviceWC" class="control-label">${msg.OFFER_TELESERVICE}</label>
+                            <div class="controls">
+                                <input type="text" id="offerTeleserviceWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerRemarkWC" class="control-label">${msg.OFFER_REMARK}</label>
+                            <div class="controls">
+                                <input type="text" id="offerRemarkWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="idWC" class="control-label">${msg.ID}</label>
+                            <div class="controls">
+                                <input type="text" id="idWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerIdResourceWC" class="control-label">${msg.OFFER_ID_RESOURCE}</label>
+                            <div class="controls">
+                                <input type="text" id="offerIdResourceWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceTypeWC" class="control-label">${msg.RESOURCE_TYPE}</label>
+                            <div class="controls">
+                                <input type="text" id="resourceTypeWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceIdWC" class="control-label">${msg.RESOURCE_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="resourceIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceUnitTypeWC" class="control-label">${msg.RESOURCE_UNIT_TYPE}</label>
+                            <div class="controls">
+                                <input type="text" id="resourceUnitTypeWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceTeleserviceWC" class="control-label">${msg.RESOURCE_TELESERVICE}</label>
+                            <div class="controls">
+                                <input type="text" id="resourceTeleserviceWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="apnValueWC" class="control-label">${msg.APN_VALUE}</label>
+                            <div class="controls">
+                                <input type="text" id="apnValueWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="mappedResourceTypeWC" class="control-label">${msg.MAPPED_RESOURCE_TYPE}</label>
+                            <div class="controls">
+                                <input type="text" id="mappedResourceTypeWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="mappedResourceIdWC" class="control-label">${msg.MAPPED_RESOURCE_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="mappedResourceIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resouceDescriptionWC" class="control-label">${msg.RESOUCE_DESCRIPTION}</label>
+                            <div class="controls">
+                                <input type="text" id="resouceDescriptionWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceRemarkWC" class="control-label">${msg.RESOURCE_REMARK}</label>
+                            <div class="controls">
+                                <input type="text" id="resourceRemarkWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceRoamingTypeWC" class="control-label">${msg.RESOURCE_ROAMING_TYPE}</label>
+                            <div class="controls">
+                                <input type="text" id="resourceRoamingTypeWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceDestinationWC" class="control-label">${msg.RESOURCE_DESTINATION}</label>
+                            <div class="controls">
+                                <input type="text" id="resourceDestinationWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceFactorWC" class="control-label">${msg.RESOURCE_FACTOR}</label>
+                            <div class="controls">
+                                <input type="text" id="resourceFactorWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="maximumValueWC" class="control-label">${msg.MAXIMUM_VALUE}</label>
+                            <div class="controls">
+                                <input type="text" id="maximumValueWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info1WC" class="control-label">${msg.INFO1}</label>
+                            <div class="controls">
+                                <input type="text" id="info1WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info2WC" class="control-label">${msg.INFO2}</label>
+                            <div class="controls">
+                                <input type="text" id="info2WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info3WC" class="control-label">${msg.INFO3}</label>
+                            <div class="controls">
+                                <input type="text" id="info3WC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="doSearch" class=" btn-primary btn">${msg.SEARCH_CAPTION}</linkcommand>
+                    <hr/>
+                </div>
+                <datatable datasource="${sqlExp.data_source}" var="inDump_item" casesensitive="true" table="IN_DUMP" showrowindex="true" autobind="true" noresults="${msg.NO_RESULTS}" sql="${sql.IN_DUMP_SEARCH}">
+                    <dataparam control="offerIdWC" expression="${sqlExp.IN_DUMP_OFFER_ID}"/>
+                    <dataparam control="productNameWC" expression="${sqlExp.IN_DUMP_PRODUCT_NAME}"/>
+                    <dataparam control="offerTypeWC" expression="${sqlExp.IN_DUMP_OFFER_TYPE}"/>
+                    <dataparam control="createdDateWC" expression="${sqlExp.IN_DUMP_CREATED_DATE}"/>
+                    <dataparam control="productDescriptionWC" expression="${sqlExp.IN_DUMP_PRODUCT_DESCRIPTION}"/>
+                    <dataparam control="roamingTypeWC" expression="${sqlExp.IN_DUMP_ROAMING_TYPE}"/>
+                    <dataparam control="offerTeleserviceWC" expression="${sqlExp.IN_DUMP_OFFER_TELESERVICE}"/>
+                    <dataparam control="offerRemarkWC" expression="${sqlExp.IN_DUMP_OFFER_REMARK}"/>
+                    <dataparam control="idWC" expression="${sqlExp.IN_DUMP_ID}"/>
+                    <dataparam control="offerIdResourceWC" expression="${sqlExp.IN_DUMP_OFFER_ID_RESOURCE}"/>
+                    <dataparam control="resourceTypeWC" expression="${sqlExp.IN_DUMP_RESOURCE_TYPE}"/>
+                    <dataparam control="resourceIdWC" expression="${sqlExp.IN_DUMP_RESOURCE_ID}"/>
+                    <dataparam control="resourceUnitTypeWC" expression="${sqlExp.IN_DUMP_RESOURCE_UNIT_TYPE}"/>
+                    <dataparam control="resourceTeleserviceWC" expression="${sqlExp.IN_DUMP_RESOURCE_TELESERVICE}"/>
+                    <dataparam control="apnValueWC" expression="${sqlExp.IN_DUMP_APN_VALUE}"/>
+                    <dataparam control="mappedResourceTypeWC" expression="${sqlExp.IN_DUMP_MAPPED_RESOURCE_TYPE}"/>
+                    <dataparam control="mappedResourceIdWC" expression="${sqlExp.IN_DUMP_MAPPED_RESOURCE_ID}"/>
+                    <dataparam control="resouceDescriptionWC" expression="${sqlExp.IN_DUMP_RESOUCE_DESCRIPTION}"/>
+                    <dataparam control="resourceRemarkWC" expression="${sqlExp.IN_DUMP_RESOURCE_REMARK}"/>
+                    <dataparam control="resourceRoamingTypeWC" expression="${sqlExp.IN_DUMP_RESOURCE_ROAMING_TYPE}"/>
+                    <dataparam control="resourceDestinationWC" expression="${sqlExp.IN_DUMP_RESOURCE_DESTINATION}"/>
+                    <dataparam control="resourceFactorWC" expression="${sqlExp.IN_DUMP_RESOURCE_FACTOR}"/>
+                    <dataparam control="maximumValueWC" expression="${sqlExp.IN_DUMP_MAXIMUM_VALUE}"/>
+                    <dataparam control="info1WC" expression="${sqlExp.IN_DUMP_INFO1}"/>
+                    <dataparam control="info2WC" expression="${sqlExp.IN_DUMP_INFO2}"/>
+                    <dataparam control="info3WC" expression="${sqlExp.IN_DUMP_INFO3}"/>
+                    <datacolumn fieldname="OFFER_ID" type="numeric" text="${msg.OFFER_ID}" id="OFFER_ID"/>
+                    <datacolumn fieldname="PRODUCT_NAME" type="string" text="${msg.PRODUCT_NAME}" id="PRODUCT_NAME"/>
+                    <datacolumn fieldname="OFFER_TYPE" type="numeric" text="${msg.OFFER_TYPE}" id="OFFER_TYPE"/>
+                    <datacolumn fieldname="CREATED_DATE" type="date" text="${msg.CREATED_DATE}" id="CREATED_DATE"/>
+                    <datacolumn fieldname="PRODUCT_DESCRIPTION" type="string" text="${msg.PRODUCT_DESCRIPTION}" id="PRODUCT_DESCRIPTION"/>
+                    <datacolumn fieldname="ROAMING_TYPE" type="string" text="${msg.ROAMING_TYPE}" id="ROAMING_TYPE"/>
+                    <datacolumn fieldname="OFFER_TELESERVICE" type="string" text="${msg.OFFER_TELESERVICE}" id="OFFER_TELESERVICE"/>
+                    <datacolumn fieldname="OFFER_REMARK" type="string" text="${msg.OFFER_REMARK}" id="OFFER_REMARK"/>
+                    <datacolumn fieldname="ID" type="numeric" text="${msg.ID}" id="ID"/>
+                    <datacolumn fieldname="OFFER_ID_RESOURCE" type="numeric" text="${msg.OFFER_ID_RESOURCE}" id="OFFER_ID_RESOURCE"/>
+                    <datacolumn fieldname="RESOURCE_TYPE" type="string" text="${msg.RESOURCE_TYPE}" id="RESOURCE_TYPE"/>
+                    <datacolumn fieldname="RESOURCE_ID" type="numeric" text="${msg.RESOURCE_ID}" id="RESOURCE_ID"/>
+                    <datacolumn fieldname="RESOURCE_UNIT_TYPE" type="string" text="${msg.RESOURCE_UNIT_TYPE}" id="RESOURCE_UNIT_TYPE"/>
+                    <datacolumn fieldname="RESOURCE_TELESERVICE" type="string" text="${msg.RESOURCE_TELESERVICE}" id="RESOURCE_TELESERVICE"/>
+                    <datacolumn fieldname="APN_VALUE" type="string" text="${msg.APN_VALUE}" id="APN_VALUE"/>
+                    <datacolumn fieldname="MAPPED_RESOURCE_TYPE" type="string" text="${msg.MAPPED_RESOURCE_TYPE}" id="MAPPED_RESOURCE_TYPE"/>
+                    <datacolumn fieldname="MAPPED_RESOURCE_ID" type="numeric" text="${msg.MAPPED_RESOURCE_ID}" id="MAPPED_RESOURCE_ID"/>
+                    <datacolumn fieldname="RESOUCE_DESCRIPTION" type="string" text="${msg.RESOUCE_DESCRIPTION}" id="RESOUCE_DESCRIPTION"/>
+                    <datacolumn fieldname="RESOURCE_REMARK" type="string" text="${msg.RESOURCE_REMARK}" id="RESOURCE_REMARK"/>
+                    <datacolumn fieldname="RESOURCE_ROAMING_TYPE" type="string" text="${msg.RESOURCE_ROAMING_TYPE}" id="RESOURCE_ROAMING_TYPE"/>
+                    <datacolumn fieldname="RESOURCE_DESTINATION" type="string" text="${msg.RESOURCE_DESTINATION}" id="RESOURCE_DESTINATION"/>
+                    <datacolumn fieldname="RESOURCE_FACTOR" type="numeric" text="${msg.RESOURCE_FACTOR}" id="RESOURCE_FACTOR"/>
+                    <datacolumn fieldname="MAXIMUM_VALUE" type="numeric" text="${msg.MAXIMUM_VALUE}" id="MAXIMUM_VALUE"/>
+                    <datacolumn fieldname="INFO1" type="string" text="${msg.INFO1}" id="INFO1"/>
+                    <datacolumn fieldname="INFO2" type="string" text="${msg.INFO2}" id="INFO2"/>
+                    <datacolumn fieldname="INFO3" type="string" text="${msg.INFO3}" id="INFO3"/>
+                    <datacolumn>
+                        <itemtemplate>
+                            <a href="/motcy/inDump/inDumpView.jspx?id=${inDump_item.id}" class="btn btn-mini">
+                                <i class="icon-list-alt icon-black"/>${msg.DETAILS}</a>
+                        </itemtemplate>
+                    </datacolumn>
+                    <datacolumncommand type="edit"/>
+                    <datacolumncommand confirm="${msg.CONFIRM_DELETE}" type="delete"/>
+                    <exporttoexcel rowstoexport="all" filename="IN_DUMP.xls" command="${msg.SAVE_TO_EXCEL}"/>
+                </datatable>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

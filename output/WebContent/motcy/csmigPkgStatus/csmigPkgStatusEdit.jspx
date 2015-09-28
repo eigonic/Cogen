@@ -1,0 +1,45 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csmigPkgStatus.CsmigPkgStatusEditController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csmigPkgStatus/csmigPkgStatusEdit.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="idWC" class="control-label">${msg.ID}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigPkgStatus.id}" id="idWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="nameWC" class="control-label">${msg.NAME}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigPkgStatus.name}" id="nameWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="descriptionWC" class="control-label">${msg.DESCRIPTION}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigPkgStatus.description}" id="descriptionWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="reconsileWC" class="control-label">${msg.RECONSILE}</label>
+                            <div class="controls">
+                                <input type="text" value="${csmigPkgStatus.reconsile}" id="reconsileWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="saveBean" class=" btn-primary btn">${msg.SAVE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

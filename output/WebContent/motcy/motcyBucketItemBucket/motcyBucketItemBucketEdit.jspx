@@ -1,0 +1,67 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.motcyBucketItemBucket.MotcyBucketItemBucketEditController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/motcyBucketItemBucket/motcyBucketItemBucketEdit.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="bucketIdWC" class="control-label">${msg.BUCKET_ID}</label>
+                            <div class="controls">
+                                <select value="${motcyBucketItemBucket.bucketId}" id="bucketIdWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="ID" value="NAME" sql="${sql.MOTCY_BUCKET_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="itemIdWC" class="control-label">${msg.ITEM_ID}</label>
+                            <div class="controls">
+                                <select value="${motcyBucketItemBucket.itemId}" id="itemIdWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="ID" value="NAME" sql="${sql.MOTCY_BUCKET_ITEM_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdWC" class="control-label">${msg.CREATED}</label>
+                            <div class="controls">
+                                <calendar value="${motcyBucketItemBucket.created}" id="createdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdByWC" class="control-label">${msg.CREATED_BY}</label>
+                            <div class="controls">
+                                <input type="text" value="${motcyBucketItemBucket.createdBy}" id="createdByWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="udpatedWC" class="control-label">${msg.UDPATED}</label>
+                            <div class="controls">
+                                <calendar value="${motcyBucketItemBucket.udpated}" id="udpatedWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="udpatedByWC" class="control-label">${msg.UDPATED_BY}</label>
+                            <div class="controls">
+                                <input type="text" value="${motcyBucketItemBucket.udpatedBy}" id="udpatedByWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="saveBean" class=" btn-primary btn">${msg.SAVE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

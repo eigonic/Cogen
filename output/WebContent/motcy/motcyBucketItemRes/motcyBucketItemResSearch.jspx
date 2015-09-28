@@ -1,0 +1,93 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.motcyBucketItemRes.MotcyBucketItemResSearchController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/motcyBucketItemRes/motcyBucketItemResSearch.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="itemIdWC" class="control-label">${msg.ITEM_ID}</label>
+                            <div class="controls">
+                                <select id="itemIdWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="ID" value="NAME" sql="${sql.MOTCY_BUCKET_ITEM_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resIdWC" class="control-label">${msg.RES_ID}</label>
+                            <div class="controls">
+                                <select id="resIdWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="ID" value="NAME" sql="${sql.MOTCY_RESOURCE_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdWC" class="control-label">${msg.CREATED}</label>
+                            <div class="controls">
+                                <calendar id="createdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdByWC" class="control-label">${msg.CREATED_BY}</label>
+                            <div class="controls">
+                                <input type="text" id="createdByWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="udpatedWC" class="control-label">${msg.UDPATED}</label>
+                            <div class="controls">
+                                <calendar id="udpatedWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="udpatedByWC" class="control-label">${msg.UDPATED_BY}</label>
+                            <div class="controls">
+                                <input type="text" id="udpatedByWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="doSearch" class=" btn-primary btn">${msg.SEARCH_CAPTION}</linkcommand>
+                    <hr/>
+                </div>
+                <datatable datasource="${sqlExp.data_source}" var="motcyBucketItemRes_item" casesensitive="true" table="MOTCY_BUCKET_ITEM_RES" showrowindex="true" autobind="true" noresults="${msg.NO_RESULTS}" sql="${sql.MOTCY_BUCKET_ITEM_RES_SEARCH}">
+                    <dataparam control="itemIdWC" expression="${sqlExp.MOTCY_BUCKET_ITEM_RES_ITEM_ID}"/>
+                    <dataparam control="resIdWC" expression="${sqlExp.MOTCY_BUCKET_ITEM_RES_RES_ID}"/>
+                    <dataparam control="createdWC" expression="${sqlExp.MOTCY_BUCKET_ITEM_RES_CREATED}"/>
+                    <dataparam control="createdByWC" expression="${sqlExp.MOTCY_BUCKET_ITEM_RES_CREATED_BY}"/>
+                    <dataparam control="udpatedWC" expression="${sqlExp.MOTCY_BUCKET_ITEM_RES_UDPATED}"/>
+                    <dataparam control="udpatedByWC" expression="${sqlExp.MOTCY_BUCKET_ITEM_RES_UDPATED_BY}"/>
+                    <datacolumn fieldname="ITEM_ID" type="lookup" lookup="ITEM_ID_FKLP" text="${msg.ITEM_ID}" id="ITEM_ID"/>
+                    <datacolumn fieldname="RES_ID" type="lookup" lookup="RES_ID_FKLP" text="${msg.RES_ID}" id="RES_ID"/>
+                    <datacolumn fieldname="CREATED" type="date" text="${msg.CREATED}" id="CREATED"/>
+                    <datacolumn fieldname="CREATED_BY" type="numeric" text="${msg.CREATED_BY}" id="CREATED_BY"/>
+                    <datacolumn fieldname="UDPATED" type="date" text="${msg.UDPATED}" id="UDPATED"/>
+                    <datacolumn fieldname="UDPATED_BY" type="numeric" text="${msg.UDPATED_BY}" id="UDPATED_BY"/>
+                    <datacolumn>
+                        <itemtemplate>
+                            <a href="/motcy/motcyBucketItemRes/motcyBucketItemResView.jspx?id=${motcyBucketItemRes_item.id}" class="btn btn-mini">
+                                <i class="icon-list-alt icon-black"/>${msg.DETAILS}</a>
+                        </itemtemplate>
+                    </datacolumn>
+                    <datalookup key="ID" sql="${sqlExp.MOTCY_BUCKET_ITEM_LOOKUP}" id="ITEM_ID_FKLP"/>
+                    <datalookup key="ID" sql="${sqlExp.MOTCY_RESOURCE_LOOKUP}" id="RES_ID_FKLP"/>
+                    <datacolumncommand type="edit"/>
+                    <datacolumncommand confirm="${msg.CONFIRM_DELETE}" type="delete"/>
+                    <exporttoexcel rowstoexport="all" filename="MOTCY_BUCKET_ITEM_RES.xls" command="${msg.SAVE_TO_EXCEL}"/>
+                </datatable>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page controller="com.bay.da.web.controller.UsersEditController" master="/pages/master.jspx">
+	<contentHolder id="mainholder">
+		<form class="well form-horizontal" action="/pages/usersEdit.da">
+			<ajaxpanel>
+                <fieldset>
+                    <div class="row">
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="idWC" class="control-label">${msg.ID}</label>
+                                <div class="controls">
+                                    <input type="text" value="${users.id}" id="idWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="userNameWC" class="control-label">${msg.USER_NAME}</label>
+                                <div class="controls">
+                                    <input type="text" value="${users.userName}" id="userNameWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="passwordWC" class="control-label">${msg.PASSWORD}</label>
+                                <div class="controls">
+                                    <input type="text" value="${users.password}" id="passwordWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="deletedWC" class="control-label">${msg.DELETED}</label>
+                                <div class="controls">
+                                    <input type="text" value="${users.deleted}" id="deletedWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="creationDateWC" class="control-label">${msg.CREATION_DATE}</label>
+                                <div class="controls">
+                                    <calendar value="${users.creationDate}" id="creationDateWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="delUserWC" class="control-label">${msg.DEL_USER}</label>
+                                <div class="controls">
+                                    <input type="text" value="${users.delUser}" id="delUserWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="delDateWC" class="control-label">${msg.DEL_DATE}</label>
+                                <div class="controls">
+                                    <calendar value="${users.delDate}" id="delDateWC"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-action">
+                        <input type="button" onserverclick="saveBean" value="${msg.SAVE_CAPTION}" class=" btn-primary"/>
+                    </div>
+                </fieldset>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

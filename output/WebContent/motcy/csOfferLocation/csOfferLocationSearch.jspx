@@ -1,0 +1,56 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csOfferLocation.CsOfferLocationSearchController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csOfferLocation/csOfferLocationSearch.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="nameWC" class="control-label">${msg.NAME}</label>
+                            <div class="controls">
+                                <input type="text" id="nameWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="locationIdWC" class="control-label">${msg.LOCATION_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="locationIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="idWC" class="control-label">${msg.ID}</label>
+                            <div class="controls">
+                                <input type="text" id="idWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="doSearch" class=" btn-primary btn">${msg.SEARCH_CAPTION}</linkcommand>
+                    <hr/>
+                </div>
+                <datatable datasource="${sqlExp.data_source}" var="csOfferLocation_item" casesensitive="true" table="CS_OFFER_LOCATION" showrowindex="true" autobind="true" noresults="${msg.NO_RESULTS}" sql="${sql.CS_OFFER_LOCATION_SEARCH}">
+                    <dataparam control="nameWC" expression="${sqlExp.CS_OFFER_LOCATION_NAME}"/>
+                    <dataparam control="locationIdWC" expression="${sqlExp.CS_OFFER_LOCATION_LOCATION_ID}"/>
+                    <dataparam control="idWC" expression="${sqlExp.CS_OFFER_LOCATION_ID}"/>
+                    <datapk name="LOCATION_ID"/>
+                    <datacolumn fieldname="NAME" type="string" text="${msg.NAME}" id="NAME"/>
+                    <datacolumn fieldname="LOCATION_ID" type="string" text="${msg.LOCATION_ID}" id="LOCATION_ID"/>
+                    <datacolumn fieldname="ID" type="numeric" text="${msg.ID}" id="ID"/>
+                    <datacolumn>
+                        <itemtemplate>
+                            <a href="/motcy/csOfferLocation/csOfferLocationView.jspx?id=${csOfferLocation_item.id}" class="btn btn-mini">
+                                <i class="icon-list-alt icon-black"/>${msg.DETAILS}</a>
+                        </itemtemplate>
+                    </datacolumn>
+                    <datacolumncommand type="edit"/>
+                    <datacolumncommand confirm="${msg.CONFIRM_DELETE}" type="delete"/>
+                    <exporttoexcel rowstoexport="all" filename="CS_OFFER_LOCATION.xls" command="${msg.SAVE_TO_EXCEL}"/>
+                </datatable>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

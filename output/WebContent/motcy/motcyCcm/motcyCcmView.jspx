@@ -1,0 +1,27 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.motcyCcm.MotcyCcmViewController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/motcyCcm/motcyCcmView.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="prodIfWC" class="control-label">${msg.PROD_IF}</label>
+                            <div class="controls">${motcyCcm.prodIf}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="ccmWC" class="control-label">${msg.CCM}</label>
+                            <div class="controls">${motcyCcm.ccm}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <a class=" btn-primary btn"/>
+                    <linkcommand confirmation="${msg.CONFIRM_DELETE}" onserverclick="deleteBean" class=" btn-danger btn">
+                        <i class="icon-trash icon-white"/> ${msg.DELETE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

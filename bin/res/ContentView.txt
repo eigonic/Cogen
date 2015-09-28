@@ -1,0 +1,34 @@
+package ${top_level_package};
+
+import ${model_package}.${model_class};
+
+import eg.java.net.web.jspx.engine.annotation.JspxBean;
+import eg.java.net.web.jspx.engine.util.StringUtility;
+import eg.java.net.web.jspx.ui.controls.WebControl;
+import eg.java.net.web.jspx.ui.pages.ContentPage;
+
+public class ${pageController} extends ContentPage
+{
+	${formContent}
+
+	int id = 0;
+	
+	@Override
+	protected void pageLoaded()
+	{
+		if (StringUtility.isNullOrEmpty(request.getParameter("id")))
+		{
+			${model_bean} = null;
+			redirect("/");
+		}
+		else
+			try
+			{
+				id = Integer.parseInt(request.getParameter("id"));
+			}
+			catch (Exception e)
+			{
+				redirect("/");
+			}
+	}
+}

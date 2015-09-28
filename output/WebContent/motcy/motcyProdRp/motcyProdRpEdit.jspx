@@ -1,0 +1,67 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.motcyProdRp.MotcyProdRpEditController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/motcyProdRp/motcyProdRpEdit.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="prodIdWC" class="control-label">${msg.PROD_ID}</label>
+                            <div class="controls">
+                                <select value="${motcyProdRp.prodId}" id="prodIdWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="ID" value="NAME" sql="${sql.MOTCY_PRODUCT_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="rpCodeWC" class="control-label">${msg.RP_CODE}</label>
+                            <div class="controls">
+                                <select value="${motcyProdRp.rpCode}" id="rpCodeWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="CODE" value="NAME" sql="${sql.MOTCY_RATE_PLAN_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdWC" class="control-label">${msg.CREATED}</label>
+                            <div class="controls">
+                                <calendar value="${motcyProdRp.created}" id="createdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdByWC" class="control-label">${msg.CREATED_BY}</label>
+                            <div class="controls">
+                                <input type="text" value="${motcyProdRp.createdBy}" id="createdByWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="updatedWC" class="control-label">${msg.UPDATED}</label>
+                            <div class="controls">
+                                <calendar value="${motcyProdRp.updated}" id="updatedWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="updatedByWC" class="control-label">${msg.UPDATED_BY}</label>
+                            <div class="controls">
+                                <input type="text" value="${motcyProdRp.updatedBy}" id="updatedByWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="saveBean" class=" btn-primary btn">${msg.SAVE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

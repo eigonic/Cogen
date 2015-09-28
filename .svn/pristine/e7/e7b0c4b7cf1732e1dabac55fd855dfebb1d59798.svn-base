@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page controller="com.bay.da.web.controller.AddressEditController" master="/pages/master.jspx">
+	<contentHolder id="mainholder">
+		<form class="well form-horizontal" action="/pages/addressEdit.da">
+			<ajaxpanel>
+                <fieldset>
+                    <div class="row">
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="idWC" class="control-label">${msg.ID}</label>
+                                <div class="controls">
+                                    <input type="text" value="${address.id}" id="idWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="contactIdWC" class="control-label">${msg.CONTACT_ID}</label>
+                                <div class="controls">
+                                    <select value="${address.contactId}" id="contactIdWC">
+                                        <option>----</option>
+                                        <datalookup datasource="${sql.data_source}" key="ID" value="NAME" sql="${sql.contact_LOOKUP}"/>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="eimatreIdWC" class="control-label">${msg.EIMATRE_ID}</label>
+                                <div class="controls">
+                                    <select value="${address.eimatreId}" id="eimatreIdWC">
+                                        <option>----</option>
+                                        <datalookup datasource="${sql.data_source}" key="ID" value="NAME" sql="${sql.emirate_LOOKUP}"/>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="countryIdWC" class="control-label">${msg.COUNTRY_ID}</label>
+                                <div class="controls">
+                                    <select value="${address.countryId}" id="countryIdWC">
+                                        <option>----</option>
+                                        <datalookup datasource="${sql.data_source}" key="ID" value="NAME" sql="${sql.country_LOOKUP}"/>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="homeWC" class="control-label">${msg.HOME}</label>
+                                <div class="controls">
+                                    <input type="text" value="${address.home}" id="homeWC"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-action">
+                        <input type="button" onserverclick="saveBean" value="${msg.SAVE_CAPTION}" class=" btn-primary"/>
+                    </div>
+                </fieldset>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

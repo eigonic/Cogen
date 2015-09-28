@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page controller="com.bay.da.web.controller.GenderViewController" master="/pages/master.jspx">
+	<contentHolder id="mainholder">
+		<form class="well form-horizontal" action="/pages/genderView.da">
+			<ajaxpanel>
+                <fieldset>
+                    <div class="row">
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="idWC" class="control-label">${msg.ID}</label>
+                                <div class="controls">
+                                    <label for="" class="control-label">${gender.id}</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="nameWC" class="control-label">${msg.NAME}</label>
+                                <div class="controls">
+                                    <label for="" class="control-label">${gender.name}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-action">
+                        <a href="/pages/genderEdit.da?id=${gender.id}" class=" btn-primary btn">EDIT_CAPTION</a>
+                        <linkcommand confirmation="${msg.CONFIRM_DELETE}" onserverclick="deleteBean" class=" btn-danger btn">
+                            <i class="icon-trash icon-white"/> ${msg.DELETE_CAPTION}</linkcommand>
+                    </div>
+                </fieldset>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

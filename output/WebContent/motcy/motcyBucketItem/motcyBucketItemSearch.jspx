@@ -1,0 +1,116 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.motcyBucketItem.MotcyBucketItemSearchController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/motcyBucketItem/motcyBucketItemSearch.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="idWC" class="control-label">${msg.ID}</label>
+                            <div class="controls">
+                                <input type="text" id="idWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="nameWC" class="control-label">${msg.NAME}</label>
+                            <div class="controls">
+                                <input type="text" id="nameWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdWC" class="control-label">${msg.CREATED}</label>
+                            <div class="controls">
+                                <calendar id="createdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdByWC" class="control-label">${msg.CREATED_BY}</label>
+                            <div class="controls">
+                                <input type="text" id="createdByWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="udpatedWC" class="control-label">${msg.UDPATED}</label>
+                            <div class="controls">
+                                <calendar id="udpatedWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="udpatedByWC" class="control-label">${msg.UDPATED_BY}</label>
+                            <div class="controls">
+                                <input type="text" id="udpatedByWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="statusWC" class="control-label">${msg.STATUS}</label>
+                            <div class="controls">
+                                <input type="text" id="statusWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="descriptionWC" class="control-label">${msg.DESCRIPTION}</label>
+                            <div class="controls">
+                                <input type="text" id="descriptionWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="remarkWC" class="control-label">${msg.REMARK}</label>
+                            <div class="controls">
+                                <input type="text" id="remarkWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="doSearch" class=" btn-primary btn">${msg.SEARCH_CAPTION}</linkcommand>
+                    <hr/>
+                </div>
+                <datatable datasource="${sqlExp.data_source}" var="motcyBucketItem_item" casesensitive="true" table="MOTCY_BUCKET_ITEM" showrowindex="true" autobind="true" noresults="${msg.NO_RESULTS}" sql="${sql.MOTCY_BUCKET_ITEM_SEARCH}">
+                    <dataparam control="idWC" expression="${sqlExp.MOTCY_BUCKET_ITEM_ID}"/>
+                    <dataparam control="nameWC" expression="${sqlExp.MOTCY_BUCKET_ITEM_NAME}"/>
+                    <dataparam control="createdWC" expression="${sqlExp.MOTCY_BUCKET_ITEM_CREATED}"/>
+                    <dataparam control="createdByWC" expression="${sqlExp.MOTCY_BUCKET_ITEM_CREATED_BY}"/>
+                    <dataparam control="udpatedWC" expression="${sqlExp.MOTCY_BUCKET_ITEM_UDPATED}"/>
+                    <dataparam control="udpatedByWC" expression="${sqlExp.MOTCY_BUCKET_ITEM_UDPATED_BY}"/>
+                    <dataparam control="statusWC" expression="${sqlExp.MOTCY_BUCKET_ITEM_STATUS}"/>
+                    <dataparam control="descriptionWC" expression="${sqlExp.MOTCY_BUCKET_ITEM_DESCRIPTION}"/>
+                    <dataparam control="remarkWC" expression="${sqlExp.MOTCY_BUCKET_ITEM_REMARK}"/>
+                    <datapk name="ID"/>
+                    <datacolumn fieldname="ID" type="numeric" text="${msg.ID}" id="ID"/>
+                    <datacolumn fieldname="NAME" type="string" text="${msg.NAME}" id="NAME"/>
+                    <datacolumn fieldname="CREATED" type="date" text="${msg.CREATED}" id="CREATED"/>
+                    <datacolumn fieldname="CREATED_BY" type="numeric" text="${msg.CREATED_BY}" id="CREATED_BY"/>
+                    <datacolumn fieldname="UDPATED" type="date" text="${msg.UDPATED}" id="UDPATED"/>
+                    <datacolumn fieldname="UDPATED_BY" type="numeric" text="${msg.UDPATED_BY}" id="UDPATED_BY"/>
+                    <datacolumn fieldname="STATUS" type="numeric" text="${msg.STATUS}" id="STATUS"/>
+                    <datacolumn fieldname="DESCRIPTION" type="string" text="${msg.DESCRIPTION}" id="DESCRIPTION"/>
+                    <datacolumn fieldname="REMARK" type="string" text="${msg.REMARK}" id="REMARK"/>
+                    <datacolumn>
+                        <itemtemplate>
+                            <a href="/motcy/motcyBucketItem/motcyBucketItemView.jspx?id=${motcyBucketItem_item.id}" class="btn btn-mini">
+                                <i class="icon-list-alt icon-black"/>${msg.DETAILS}</a>
+                        </itemtemplate>
+                    </datacolumn>
+                    <datacolumncommand type="edit"/>
+                    <datacolumncommand confirm="${msg.CONFIRM_DELETE}" type="delete"/>
+                    <exporttoexcel rowstoexport="all" filename="MOTCY_BUCKET_ITEM.xls" command="${msg.SAVE_TO_EXCEL}"/>
+                </datatable>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page controller="com.bay.da.web.controller.AssetModelSearchController" master="/pages/master.jspx">
+	<contentHolder id="mainholder">
+		<form class="well form-horizontal" action="/pages/assetModelSearch.da">
+			<ajaxpanel>
+                <fieldset>
+                    <div class="row">
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="idWC" class="control-label">${msg.ID}</label>
+                                <div class="controls">
+                                    <input type="text" id="idWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="nameWC" class="control-label">${msg.NAME}</label>
+                                <div class="controls">
+                                    <input type="text" id="nameWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="brandWC" class="control-label">${msg.BRAND}</label>
+                                <div class="controls">
+                                    <select id="brandWC">
+                                        <option>----</option>
+                                        <datalookup datasource="${sql.data_source}" key="ID" value="NAME" sql="${sql.brand_LOOKUP}"/>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="yearWC" class="control-label">${msg.YEAR}</label>
+                                <div class="controls">
+                                    <input type="text" id="yearWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="warantyWC" class="control-label">${msg.WARANTY}</label>
+                                <div class="controls">
+                                    <input type="text" id="warantyWC"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-action">
+                        <input type="button" onserverclick="doSearch" value="${msg.SEARCH_CAPTION}" class=" btn-primary"/>
+                        <hr/>
+                    </div>
+                    <datatable datasource="${sql.data_source}" var="assetModel_item" casesensitive="true" table="asset_model" showrowindex="true" autobind="true" noresults="${msg.NO_RESULTS}" sql="${sql.asset_modelSEARCH}">
+                        <dataparam control="idWC" expression="${sql.asset_model_ID}"/>
+                        <dataparam control="nameWC" expression="${sql.asset_model_NAME}"/>
+                        <dataparam control="brandWC" expression="${sql.asset_model_BRAND}"/>
+                        <dataparam control="yearWC" expression="${sql.asset_model_YEAR}"/>
+                        <dataparam control="warantyWC" expression="${sql.asset_model_WARANTY}"/>
+                        <datapk name="ID"/>
+                        <datacolumn fieldname="ID" type="numeric" text="${msg.ID}" id="ID"/>
+                        <datacolumn fieldname="NAME" type="string" text="${msg.NAME}" id="NAME"/>
+                        <datacolumn fieldname="BRAND" type="lookup" lookup="BRAND_FKLP" text="${msg.BRAND}" id="BRAND"/>
+                        <datacolumn fieldname="YEAR" type="string" text="${msg.YEAR}" id="YEAR"/>
+                        <datacolumn fieldname="WARANTY" type="numeric" text="${msg.WARANTY}" id="WARANTY"/>
+                        <datacolumn>
+                            <itemtemplate>
+                                <a href="/pages/assetModelView.da?id=${assetModel_item.id}" class="btn btn-large">
+                                    <i class="icon-list-alt icon-black"/>${msg.DETAILS}</a>
+                            </itemtemplate>
+                        </datacolumn>
+                        <datalookup key="ID" sql="${sql.brand_LOOKUP}" id="BRAND_FKLP"/>
+                        <datacolumncommand type="edit"/>
+                        <datacolumncommand confirm="${msg.CONFIRM_DELETE}" type="delete"/>
+                    </datatable>
+                </fieldset>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

@@ -1,0 +1,70 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.motcyProductFf.MotcyProductFfViewController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/motcyProductFf/motcyProductFfView.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="prodIdWC" class="control-label">${msg.PROD_ID}</label>
+                            <div class="controls">${motcyProductFf.prodId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="bucketIdWC" class="control-label">${msg.BUCKET_ID}</label>
+                            <div class="controls">${motcyProductFf.bucketId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="itemIdWC" class="control-label">${msg.ITEM_ID}</label>
+                            <div class="controls">${motcyProductFf.itemId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resIdWC" class="control-label">${msg.RES_ID}</label>
+                            <div class="controls">${motcyProductFf.resId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="valueWC" class="control-label">${msg.VALUE}</label>
+                            <div class="controls">${motcyProductFf.value}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdWC" class="control-label">${msg.CREATED}</label>
+                            <div class="controls">${motcyProductFf.created}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdByWC" class="control-label">${msg.CREATED_BY}</label>
+                            <div class="controls">${motcyProductFf.createdBy}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="udpatedWC" class="control-label">${msg.UDPATED}</label>
+                            <div class="controls">${motcyProductFf.udpated}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="udpatedByWC" class="control-label">${msg.UDPATED_BY}</label>
+                            <div class="controls">${motcyProductFf.udpatedBy}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <a href="/motcy/motcyProductFf/motcyProductFfEdit.jspx?prodId=${motcyProductFf.prodId}" class=" btn-primary btn">
+                        <i class="icon-pencil icon-white"/>${msg.EDIT_CAPTION}</a>
+                    <linkcommand confirmation="${msg.CONFIRM_DELETE}" onserverclick="deleteBean" class=" btn-danger btn">
+                        <i class="icon-trash icon-white"/> ${msg.DELETE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

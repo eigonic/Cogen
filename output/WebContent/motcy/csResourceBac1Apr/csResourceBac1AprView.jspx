@@ -1,0 +1,123 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csResourceBac1Apr.CsResourceBac1AprViewController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csResourceBac1Apr/csResourceBac1AprView.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="idWC" class="control-label">${msg.ID}</label>
+                            <div class="controls">${csResourceBac1Apr.id}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerIdResourceWC" class="control-label">${msg.OFFER_ID_RESOURCE}</label>
+                            <div class="controls">${csResourceBac1Apr.offerIdResource}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceTypeWC" class="control-label">${msg.RESOURCE_TYPE}</label>
+                            <div class="controls">${csResourceBac1Apr.resourceType}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceIdWC" class="control-label">${msg.RESOURCE_ID}</label>
+                            <div class="controls">${csResourceBac1Apr.resourceId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceUnitTypeWC" class="control-label">${msg.RESOURCE_UNIT_TYPE}</label>
+                            <div class="controls">${csResourceBac1Apr.resourceUnitType}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceTeleserviceWC" class="control-label">${msg.RESOURCE_TELESERVICE}</label>
+                            <div class="controls">${csResourceBac1Apr.resourceTeleservice}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="apnValueWC" class="control-label">${msg.APN_VALUE}</label>
+                            <div class="controls">${csResourceBac1Apr.apnValue}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="mappedResourceTypeWC" class="control-label">${msg.MAPPED_RESOURCE_TYPE}</label>
+                            <div class="controls">${csResourceBac1Apr.mappedResourceType}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="mappedResourceIdWC" class="control-label">${msg.MAPPED_RESOURCE_ID}</label>
+                            <div class="controls">${csResourceBac1Apr.mappedResourceId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resouceDescriptionWC" class="control-label">${msg.RESOUCE_DESCRIPTION}</label>
+                            <div class="controls">${csResourceBac1Apr.resouceDescription}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceRemarkWC" class="control-label">${msg.RESOURCE_REMARK}</label>
+                            <div class="controls">${csResourceBac1Apr.resourceRemark}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceRoamingTypeWC" class="control-label">${msg.RESOURCE_ROAMING_TYPE}</label>
+                            <div class="controls">${csResourceBac1Apr.resourceRoamingType}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceDestinationWC" class="control-label">${msg.RESOURCE_DESTINATION}</label>
+                            <div class="controls">${csResourceBac1Apr.resourceDestination}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceFactorWC" class="control-label">${msg.RESOURCE_FACTOR}</label>
+                            <div class="controls">${csResourceBac1Apr.resourceFactor}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="maximumValueWC" class="control-label">${msg.MAXIMUM_VALUE}</label>
+                            <div class="controls">${csResourceBac1Apr.maximumValue}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info1WC" class="control-label">${msg.INFO1}</label>
+                            <div class="controls">${csResourceBac1Apr.info1}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info2WC" class="control-label">${msg.INFO2}</label>
+                            <div class="controls">${csResourceBac1Apr.info2}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info3WC" class="control-label">${msg.INFO3}</label>
+                            <div class="controls">${csResourceBac1Apr.info3}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <a class=" btn-primary btn"/>
+                    <linkcommand confirmation="${msg.CONFIRM_DELETE}" onserverclick="deleteBean" class=" btn-danger btn">
+                        <i class="icon-trash icon-white"/> ${msg.DELETE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

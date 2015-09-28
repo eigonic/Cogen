@@ -1,0 +1,105 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csmigReconsileSubscriber.CsmigReconsileSubscriberSearchController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csmigReconsileSubscriber/csmigReconsileSubscriberSearch.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="msisdnWC" class="control-label">${msg.MSISDN}</label>
+                            <div class="controls">
+                                <input type="text" id="msisdnWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="statusWC" class="control-label">${msg.STATUS}</label>
+                            <div class="controls">
+                                <input type="text" id="statusWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="typeWC" class="control-label">${msg.TYPE}</label>
+                            <div class="controls">
+                                <input type="text" id="typeWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="pkgCountWC" class="control-label">${msg.PKG_COUNT}</label>
+                            <div class="controls">
+                                <input type="text" id="pkgCountWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="processorWC" class="control-label">${msg.PROCESSOR}</label>
+                            <div class="controls">
+                                <input type="text" id="processorWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="completedWC" class="control-label">${msg.COMPLETED}</label>
+                            <div class="controls">
+                                <calendar id="completedWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="failReasonWC" class="control-label">${msg.FAIL_REASON}</label>
+                            <div class="controls">
+                                <input type="text" id="failReasonWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="failMsgWC" class="control-label">${msg.FAIL_MSG}</label>
+                            <div class="controls">
+                                <input type="text" id="failMsgWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="doSearch" class=" btn-primary btn">${msg.SEARCH_CAPTION}</linkcommand>
+                    <hr/>
+                </div>
+                <datatable datasource="${sqlExp.data_source}" var="csmigReconsileSubscriber_item" casesensitive="true" table="CSMIG_RECONSILE_SUBSCRIBER" showrowindex="true" autobind="true" noresults="${msg.NO_RESULTS}" sql="${sql.CSMIG_RECONSILE_SUBSCRIBER_SEARCH}">
+                    <dataparam control="msisdnWC" expression="${sqlExp.CSMIG_RECONSILE_SUBSCRIBER_MSISDN}"/>
+                    <dataparam control="statusWC" expression="${sqlExp.CSMIG_RECONSILE_SUBSCRIBER_STATUS}"/>
+                    <dataparam control="typeWC" expression="${sqlExp.CSMIG_RECONSILE_SUBSCRIBER_TYPE}"/>
+                    <dataparam control="pkgCountWC" expression="${sqlExp.CSMIG_RECONSILE_SUBSCRIBER_PKG_COUNT}"/>
+                    <dataparam control="processorWC" expression="${sqlExp.CSMIG_RECONSILE_SUBSCRIBER_PROCESSOR}"/>
+                    <dataparam control="completedWC" expression="${sqlExp.CSMIG_RECONSILE_SUBSCRIBER_COMPLETED}"/>
+                    <dataparam control="failReasonWC" expression="${sqlExp.CSMIG_RECONSILE_SUBSCRIBER_FAIL_REASON}"/>
+                    <dataparam control="failMsgWC" expression="${sqlExp.CSMIG_RECONSILE_SUBSCRIBER_FAIL_MSG}"/>
+                    <datacolumn fieldname="MSISDN" type="numeric" text="${msg.MSISDN}" id="MSISDN"/>
+                    <datacolumn fieldname="STATUS" type="numeric" text="${msg.STATUS}" id="STATUS"/>
+                    <datacolumn fieldname="TYPE" type="numeric" text="${msg.TYPE}" id="TYPE"/>
+                    <datacolumn fieldname="PKG_COUNT" type="numeric" text="${msg.PKG_COUNT}" id="PKG_COUNT"/>
+                    <datacolumn fieldname="PROCESSOR" type="numeric" text="${msg.PROCESSOR}" id="PROCESSOR"/>
+                    <datacolumn fieldname="COMPLETED" type="date" text="${msg.COMPLETED}" id="COMPLETED"/>
+                    <datacolumn fieldname="FAIL_REASON" type="numeric" text="${msg.FAIL_REASON}" id="FAIL_REASON"/>
+                    <datacolumn fieldname="FAIL_MSG" type="string" text="${msg.FAIL_MSG}" id="FAIL_MSG"/>
+                    <datacolumn>
+                        <itemtemplate>
+                            <a href="/motcy/csmigReconsileSubscriber/csmigReconsileSubscriberView.jspx?id=${csmigReconsileSubscriber_item.id}" class="btn btn-mini">
+                                <i class="icon-list-alt icon-black"/>${msg.DETAILS}</a>
+                        </itemtemplate>
+                    </datacolumn>
+                    <datacolumncommand type="edit"/>
+                    <datacolumncommand confirm="${msg.CONFIRM_DELETE}" type="delete"/>
+                    <exporttoexcel rowstoexport="all" filename="CSMIG_RECONSILE_SUBSCRIBER.xls" command="${msg.SAVE_TO_EXCEL}"/>
+                </datatable>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

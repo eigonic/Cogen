@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page controller="com.bay.da.web.controller.MemoSearchController" master="/pages/master.jspx">
+	<contentHolder id="mainholder">
+		<form class="well form-horizontal" action="/pages/memoSearch.da">
+			<ajaxpanel>
+                <fieldset>
+                    <div class="row">
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="idWC" class="control-label">${msg.ID}</label>
+                                <div class="controls">
+                                    <input type="text" id="idWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="assetIdWC" class="control-label">${msg.ASSET_ID}</label>
+                                <div class="controls">
+                                    <select id="assetIdWC">
+                                        <option>----</option>
+                                        <datalookup datasource="${sql.data_source}" key="ID" value="NAME" sql="${sql.asset_LOOKUP}"/>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="textWC" class="control-label">${msg.TEXT}</label>
+                                <div class="controls">
+                                    <input type="text" id="textWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="dueDateWC" class="control-label">${msg.DUE_DATE}</label>
+                                <div class="controls">
+                                    <calendar id="dueDateWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="createdByWC" class="control-label">${msg.CREATED_BY}</label>
+                                <div class="controls">
+                                    <select id="createdByWC">
+                                        <option>----</option>
+                                        <datalookup datasource="${sql.data_source}" key="ID" value="NAME" sql="${sql.users_LOOKUP}"/>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="creationDateWC" class="control-label">${msg.CREATION_DATE}</label>
+                                <div class="controls">
+                                    <calendar id="creationDateWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="deletedWC" class="control-label">${msg.DELETED}</label>
+                                <div class="controls">
+                                    <input type="text" id="deletedWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="delDateWC" class="control-label">${msg.DEL_DATE}</label>
+                                <div class="controls">
+                                    <calendar id="delDateWC"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="delUserWC" class="control-label">${msg.DEL_USER}</label>
+                                <div class="controls">
+                                    <select id="delUserWC">
+                                        <option>----</option>
+                                        <datalookup datasource="${sql.data_source}" key="ID" value="NAME" sql="${sql.users_LOOKUP}"/>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-action">
+                        <input type="button" onserverclick="doSearch" value="${msg.SEARCH_CAPTION}" class=" btn-primary"/>
+                        <hr/>
+                    </div>
+                    <datatable datasource="${sql.data_source}" var="memo_item" casesensitive="true" table="memo" showrowindex="true" autobind="true" noresults="${msg.NO_RESULTS}" sql="${sql.memoSEARCH}">
+                        <dataparam control="idWC" expression="${sql.memo_ID}"/>
+                        <dataparam control="assetIdWC" expression="${sql.memo_ASSET_ID}"/>
+                        <dataparam control="textWC" expression="${sql.memo_TEXT}"/>
+                        <dataparam control="dueDateWC" expression="${sql.memo_DUE_DATE}"/>
+                        <dataparam control="createdByWC" expression="${sql.memo_CREATED_BY}"/>
+                        <dataparam control="creationDateWC" expression="${sql.memo_CREATION_DATE}"/>
+                        <dataparam control="deletedWC" expression="${sql.memo_DELETED}"/>
+                        <dataparam control="delDateWC" expression="${sql.memo_DEL_DATE}"/>
+                        <dataparam control="delUserWC" expression="${sql.memo_DEL_USER}"/>
+                        <datapk name="ID"/>
+                        <datacolumn fieldname="ID" type="numeric" text="${msg.ID}" id="ID"/>
+                        <datacolumn fieldname="ASSET_ID" type="lookup" lookup="ASSET_ID_FKLP" text="${msg.ASSET_ID}" id="ASSET_ID"/>
+                        <datacolumn fieldname="TEXT" type="string" text="${msg.TEXT}" id="TEXT"/>
+                        <datacolumn fieldname="DUE_DATE" type="date" text="${msg.DUE_DATE}" id="DUE_DATE"/>
+                        <datacolumn fieldname="CREATED_BY" type="lookup" lookup="CREATED_BY_FKLP" text="${msg.CREATED_BY}" id="CREATED_BY"/>
+                        <datacolumn fieldname="CREATION_DATE" type="date" text="${msg.CREATION_DATE}" id="CREATION_DATE"/>
+                        <datacolumn fieldname="DELETED" type="numeric" text="${msg.DELETED}" id="DELETED"/>
+                        <datacolumn fieldname="DEL_DATE" type="date" text="${msg.DEL_DATE}" id="DEL_DATE"/>
+                        <datacolumn fieldname="DEL_USER" type="lookup" lookup="DEL_USER_FKLP" text="${msg.DEL_USER}" id="DEL_USER"/>
+                        <datacolumn>
+                            <itemtemplate>
+                                <a href="/pages/memoView.da?id=${memo_item.id}" class="btn btn-large">
+                                    <i class="icon-list-alt icon-black"/>${msg.DETAILS}</a>
+                            </itemtemplate>
+                        </datacolumn>
+                        <datalookup key="ID" sql="${sql.asset_LOOKUP}" id="ASSET_ID_FKLP"/>
+                        <datalookup key="ID" sql="${sql.users_LOOKUP}" id="CREATED_BY_FKLP"/>
+                        <datalookup key="ID" sql="${sql.users_LOOKUP}" id="DEL_USER_FKLP"/>
+                        <datacolumncommand type="edit"/>
+                        <datacolumncommand confirm="${msg.CONFIRM_DELETE}" type="delete"/>
+                    </datatable>
+                </fieldset>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

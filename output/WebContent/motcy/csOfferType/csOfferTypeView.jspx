@@ -1,0 +1,28 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csOfferType.CsOfferTypeViewController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csOfferType/csOfferTypeView.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerTypeIdWC" class="control-label">${msg.OFFER_TYPE_ID}</label>
+                            <div class="controls">${csOfferType.offerTypeId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerTypeNameWC" class="control-label">${msg.OFFER_TYPE_NAME}</label>
+                            <div class="controls">${csOfferType.offerTypeName}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <a href="/motcy/csOfferType/csOfferTypeEdit.jspx?offerTypeId=${csOfferType.offerTypeId}" class=" btn-primary btn">
+                        <i class="icon-pencil icon-white"/>${msg.EDIT_CAPTION}</a>
+                    <linkcommand confirmation="${msg.CONFIRM_DELETE}" onserverclick="deleteBean" class=" btn-danger btn">
+                        <i class="icon-trash icon-white"/> ${msg.DELETE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

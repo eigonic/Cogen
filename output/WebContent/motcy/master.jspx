@@ -1,0 +1,27 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.Master">
+
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        	<link rel="SHORTCUT ICON" href=""/>
+			<title>${msg.APP_NAME}</title>
+		</head>
+		<body dir="${this.dir}">
+	        <resourceBundle id="msg" base="/res.msg" charset="UTF-8"/>
+	        <resourceBundle id="sql" base="/res.sql" charset="UTF-8"/>
+	        <resourceBundle id="sqlExp" base="/res.sql" charset="UTF-8"/>
+			<placeHolder id="mainholder"/>
+			
+			
+			  <footer>
+		        <p> Company ${this.year }</p>
+		      </footer>
+		</body>
+	</html>
+</page>

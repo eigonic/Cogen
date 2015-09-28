@@ -1,0 +1,29 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csOfferType.CsOfferTypeEditController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csOfferType/csOfferTypeEdit.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerTypeIdWC" class="control-label">${msg.OFFER_TYPE_ID}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferType.offerTypeId}" id="offerTypeIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerTypeNameWC" class="control-label">${msg.OFFER_TYPE_NAME}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferType.offerTypeName}" id="offerTypeNameWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="saveBean" class=" btn-primary btn">${msg.SAVE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

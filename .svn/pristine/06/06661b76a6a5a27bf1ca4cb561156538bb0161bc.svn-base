@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page controller="com.bay.da.web.controller.UserGroupsEditController" master="/pages/master.jspx">
+	<contentHolder id="mainholder">
+		<form class="well form-horizontal" action="/pages/userGroupsEdit.da">
+			<ajaxpanel>
+                <fieldset>
+                    <div class="row">
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="userIdWC" class="control-label">${msg.USER_ID}</label>
+                                <div class="controls">
+                                    <select value="${userGroups.userId}" id="userIdWC">
+                                        <option>----</option>
+                                        <datalookup datasource="${sql.data_source}" key="ID" value="NAME" sql="${sql.users_LOOKUP}"/>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="groupIdWC" class="control-label">${msg.GROUP_ID}</label>
+                                <div class="controls">
+                                    <select value="${userGroups.groupId}" id="groupIdWC">
+                                        <option>----</option>
+                                        <datalookup datasource="${sql.data_source}" key="ID" value="NAME" sql="${sql.groups_LOOKUP}"/>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-action">
+                        <input type="button" onserverclick="saveBean" value="${msg.SAVE_CAPTION}" class=" btn-primary"/>
+                    </div>
+                </fieldset>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

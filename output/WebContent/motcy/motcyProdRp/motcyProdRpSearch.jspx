@@ -1,0 +1,93 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.motcyProdRp.MotcyProdRpSearchController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/motcyProdRp/motcyProdRpSearch.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="prodIdWC" class="control-label">${msg.PROD_ID}</label>
+                            <div class="controls">
+                                <select id="prodIdWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="ID" value="NAME" sql="${sql.MOTCY_PRODUCT_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="rpCodeWC" class="control-label">${msg.RP_CODE}</label>
+                            <div class="controls">
+                                <select id="rpCodeWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="CODE" value="NAME" sql="${sql.MOTCY_RATE_PLAN_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdWC" class="control-label">${msg.CREATED}</label>
+                            <div class="controls">
+                                <calendar id="createdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdByWC" class="control-label">${msg.CREATED_BY}</label>
+                            <div class="controls">
+                                <input type="text" id="createdByWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="updatedWC" class="control-label">${msg.UPDATED}</label>
+                            <div class="controls">
+                                <calendar id="updatedWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="updatedByWC" class="control-label">${msg.UPDATED_BY}</label>
+                            <div class="controls">
+                                <input type="text" id="updatedByWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="doSearch" class=" btn-primary btn">${msg.SEARCH_CAPTION}</linkcommand>
+                    <hr/>
+                </div>
+                <datatable datasource="${sqlExp.data_source}" var="motcyProdRp_item" casesensitive="true" table="MOTCY_PROD_RP" showrowindex="true" autobind="true" noresults="${msg.NO_RESULTS}" sql="${sql.MOTCY_PROD_RP_SEARCH}">
+                    <dataparam control="prodIdWC" expression="${sqlExp.MOTCY_PROD_RP_PROD_ID}"/>
+                    <dataparam control="rpCodeWC" expression="${sqlExp.MOTCY_PROD_RP_RP_CODE}"/>
+                    <dataparam control="createdWC" expression="${sqlExp.MOTCY_PROD_RP_CREATED}"/>
+                    <dataparam control="createdByWC" expression="${sqlExp.MOTCY_PROD_RP_CREATED_BY}"/>
+                    <dataparam control="updatedWC" expression="${sqlExp.MOTCY_PROD_RP_UPDATED}"/>
+                    <dataparam control="updatedByWC" expression="${sqlExp.MOTCY_PROD_RP_UPDATED_BY}"/>
+                    <datacolumn fieldname="PROD_ID" type="lookup" lookup="PROD_ID_FKLP" text="${msg.PROD_ID}" id="PROD_ID"/>
+                    <datacolumn fieldname="RP_CODE" type="lookup" lookup="RP_CODE_FKLP" text="${msg.RP_CODE}" id="RP_CODE"/>
+                    <datacolumn fieldname="CREATED" type="date" text="${msg.CREATED}" id="CREATED"/>
+                    <datacolumn fieldname="CREATED_BY" type="numeric" text="${msg.CREATED_BY}" id="CREATED_BY"/>
+                    <datacolumn fieldname="UPDATED" type="date" text="${msg.UPDATED}" id="UPDATED"/>
+                    <datacolumn fieldname="UPDATED_BY" type="numeric" text="${msg.UPDATED_BY}" id="UPDATED_BY"/>
+                    <datacolumn>
+                        <itemtemplate>
+                            <a href="/motcy/motcyProdRp/motcyProdRpView.jspx?id=${motcyProdRp_item.id}" class="btn btn-mini">
+                                <i class="icon-list-alt icon-black"/>${msg.DETAILS}</a>
+                        </itemtemplate>
+                    </datacolumn>
+                    <datalookup key="ID" sql="${sqlExp.MOTCY_PRODUCT_LOOKUP}" id="PROD_ID_FKLP"/>
+                    <datalookup key="CODE" sql="${sqlExp.MOTCY_RATE_PLAN_LOOKUP}" id="RP_CODE_FKLP"/>
+                    <datacolumncommand type="edit"/>
+                    <datacolumncommand confirm="${msg.CONFIRM_DELETE}" type="delete"/>
+                    <exporttoexcel rowstoexport="all" filename="MOTCY_PROD_RP.xls" command="${msg.SAVE_TO_EXCEL}"/>
+                </datatable>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

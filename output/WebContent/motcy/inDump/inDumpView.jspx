@@ -1,0 +1,171 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.inDump.InDumpViewController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/inDump/inDumpView.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerIdWC" class="control-label">${msg.OFFER_ID}</label>
+                            <div class="controls">${inDump.offerId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="productNameWC" class="control-label">${msg.PRODUCT_NAME}</label>
+                            <div class="controls">${inDump.productName}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerTypeWC" class="control-label">${msg.OFFER_TYPE}</label>
+                            <div class="controls">${inDump.offerType}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdDateWC" class="control-label">${msg.CREATED_DATE}</label>
+                            <div class="controls">${inDump.createdDate}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="productDescriptionWC" class="control-label">${msg.PRODUCT_DESCRIPTION}</label>
+                            <div class="controls">${inDump.productDescription}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="roamingTypeWC" class="control-label">${msg.ROAMING_TYPE}</label>
+                            <div class="controls">${inDump.roamingType}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerTeleserviceWC" class="control-label">${msg.OFFER_TELESERVICE}</label>
+                            <div class="controls">${inDump.offerTeleservice}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerRemarkWC" class="control-label">${msg.OFFER_REMARK}</label>
+                            <div class="controls">${inDump.offerRemark}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="idWC" class="control-label">${msg.ID}</label>
+                            <div class="controls">${inDump.id}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerIdResourceWC" class="control-label">${msg.OFFER_ID_RESOURCE}</label>
+                            <div class="controls">${inDump.offerIdResource}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceTypeWC" class="control-label">${msg.RESOURCE_TYPE}</label>
+                            <div class="controls">${inDump.resourceType}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceIdWC" class="control-label">${msg.RESOURCE_ID}</label>
+                            <div class="controls">${inDump.resourceId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceUnitTypeWC" class="control-label">${msg.RESOURCE_UNIT_TYPE}</label>
+                            <div class="controls">${inDump.resourceUnitType}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceTeleserviceWC" class="control-label">${msg.RESOURCE_TELESERVICE}</label>
+                            <div class="controls">${inDump.resourceTeleservice}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="apnValueWC" class="control-label">${msg.APN_VALUE}</label>
+                            <div class="controls">${inDump.apnValue}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="mappedResourceTypeWC" class="control-label">${msg.MAPPED_RESOURCE_TYPE}</label>
+                            <div class="controls">${inDump.mappedResourceType}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="mappedResourceIdWC" class="control-label">${msg.MAPPED_RESOURCE_ID}</label>
+                            <div class="controls">${inDump.mappedResourceId}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resouceDescriptionWC" class="control-label">${msg.RESOUCE_DESCRIPTION}</label>
+                            <div class="controls">${inDump.resouceDescription}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceRemarkWC" class="control-label">${msg.RESOURCE_REMARK}</label>
+                            <div class="controls">${inDump.resourceRemark}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceRoamingTypeWC" class="control-label">${msg.RESOURCE_ROAMING_TYPE}</label>
+                            <div class="controls">${inDump.resourceRoamingType}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceDestinationWC" class="control-label">${msg.RESOURCE_DESTINATION}</label>
+                            <div class="controls">${inDump.resourceDestination}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceFactorWC" class="control-label">${msg.RESOURCE_FACTOR}</label>
+                            <div class="controls">${inDump.resourceFactor}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="maximumValueWC" class="control-label">${msg.MAXIMUM_VALUE}</label>
+                            <div class="controls">${inDump.maximumValue}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info1WC" class="control-label">${msg.INFO1}</label>
+                            <div class="controls">${inDump.info1}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info2WC" class="control-label">${msg.INFO2}</label>
+                            <div class="controls">${inDump.info2}</div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info3WC" class="control-label">${msg.INFO3}</label>
+                            <div class="controls">${inDump.info3}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <a class=" btn-primary btn"/>
+                    <linkcommand confirmation="${msg.CONFIRM_DELETE}" onserverclick="deleteBean" class=" btn-danger btn">
+                        <i class="icon-trash icon-white"/> ${msg.DELETE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

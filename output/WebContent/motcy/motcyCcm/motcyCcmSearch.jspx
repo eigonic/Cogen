@@ -1,0 +1,49 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.motcyCcm.MotcyCcmSearchController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/motcyCcm/motcyCcmSearch.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="prodIfWC" class="control-label">${msg.PROD_IF}</label>
+                            <div class="controls">
+                                <select id="prodIfWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="ID" value="NAME" sql="${sql.MOTCY_PRODUCT_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="ccmWC" class="control-label">${msg.CCM}</label>
+                            <div class="controls">
+                                <input type="text" id="ccmWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="doSearch" class=" btn-primary btn">${msg.SEARCH_CAPTION}</linkcommand>
+                    <hr/>
+                </div>
+                <datatable datasource="${sqlExp.data_source}" var="motcyCcm_item" casesensitive="true" table="MOTCY_CCM" showrowindex="true" autobind="true" noresults="${msg.NO_RESULTS}" sql="${sql.MOTCY_CCM_SEARCH}">
+                    <dataparam control="prodIfWC" expression="${sqlExp.MOTCY_CCM_PROD_IF}"/>
+                    <dataparam control="ccmWC" expression="${sqlExp.MOTCY_CCM_CCM}"/>
+                    <datacolumn fieldname="PROD_IF" type="lookup" lookup="PROD_IF_FKLP" text="${msg.PROD_IF}" id="PROD_IF"/>
+                    <datacolumn fieldname="CCM" type="string" text="${msg.CCM}" id="CCM"/>
+                    <datacolumn>
+                        <itemtemplate>
+                            <a href="/motcy/motcyCcm/motcyCcmView.jspx?id=${motcyCcm_item.id}" class="btn btn-mini">
+                                <i class="icon-list-alt icon-black"/>${msg.DETAILS}</a>
+                        </itemtemplate>
+                    </datacolumn>
+                    <datalookup key="ID" sql="${sqlExp.MOTCY_PRODUCT_LOOKUP}" id="PROD_IF_FKLP"/>
+                    <datacolumncommand type="edit"/>
+                    <datacolumncommand confirm="${msg.CONFIRM_DELETE}" type="delete"/>
+                    <exporttoexcel rowstoexport="all" filename="MOTCY_CCM.xls" command="${msg.SAVE_TO_EXCEL}"/>
+                </datatable>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page controller="com.bay.da.web.controller.UserGroupsSearchController" master="/pages/master.jspx">
+	<contentHolder id="mainholder">
+		<form class="well form-horizontal" action="/pages/userGroupsSearch.da">
+			<ajaxpanel>
+                <fieldset>
+                    <div class="row">
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="userIdWC" class="control-label">${msg.USER_ID}</label>
+                                <div class="controls">
+                                    <select id="userIdWC">
+                                        <option>----</option>
+                                        <datalookup datasource="${sql.data_source}" key="ID" value="NAME" sql="${sql.users_LOOKUP}"/>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label for="groupIdWC" class="control-label">${msg.GROUP_ID}</label>
+                                <div class="controls">
+                                    <select id="groupIdWC">
+                                        <option>----</option>
+                                        <datalookup datasource="${sql.data_source}" key="ID" value="NAME" sql="${sql.groups_LOOKUP}"/>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-action">
+                        <input type="button" onserverclick="doSearch" value="${msg.SEARCH_CAPTION}" class=" btn-primary"/>
+                        <hr/>
+                    </div>
+                    <datatable datasource="${sql.data_source}" var="userGroups_item" casesensitive="true" table="user_groups" showrowindex="true" autobind="true" noresults="${msg.NO_RESULTS}" sql="${sql.user_groupsSEARCH}">
+                        <dataparam control="userIdWC" expression="${sql.user_groups_USER_ID}"/>
+                        <dataparam control="groupIdWC" expression="${sql.user_groups_GROUP_ID}"/>
+                        <datapk name="USER_ID"/>
+                        <datapk name="GROUP_ID"/>
+                        <datacolumn fieldname="USER_ID" type="lookup" lookup="USER_ID_FKLP" text="${msg.USER_ID}" id="USER_ID"/>
+                        <datacolumn fieldname="GROUP_ID" type="lookup" lookup="GROUP_ID_FKLP" text="${msg.GROUP_ID}" id="GROUP_ID"/>
+                        <datacolumn>
+                            <itemtemplate>
+                                <a href="/pages/userGroupsView.da?id=${userGroups_item.id}" class="btn btn-large">
+                                    <i class="icon-list-alt icon-black"/>${msg.DETAILS}</a>
+                            </itemtemplate>
+                        </datacolumn>
+                        <datalookup key="ID" sql="${sql.users_LOOKUP}" id="USER_ID_FKLP"/>
+                        <datalookup key="ID" sql="${sql.groups_LOOKUP}" id="GROUP_ID_FKLP"/>
+                        <datacolumncommand type="edit"/>
+                        <datacolumncommand confirm="${msg.CONFIRM_DELETE}" type="delete"/>
+                    </datatable>
+                </fieldset>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

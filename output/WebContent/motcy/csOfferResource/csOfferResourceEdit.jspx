@@ -1,0 +1,239 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csOfferResource.CsOfferResourceEditController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csOfferResource/csOfferResourceEdit.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="idWC" class="control-label">${msg.ID}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.id}" id="idWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerIdResourceWC" class="control-label">${msg.OFFER_ID_RESOURCE}</label>
+                            <div class="controls">
+                                <select value="${csOfferResource.offerIdResource}" id="offerIdResourceWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="OFFER_ID" value="NAME" sql="${sql.CS_OFFER_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceTypeWC" class="control-label">${msg.RESOURCE_TYPE}</label>
+                            <div class="controls">
+                                <select value="${csOfferResource.resourceType}" id="resourceTypeWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="RES_TYPE_ID" value="NAME" sql="${sql.CS_RESOURCE_TYPE_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceIdWC" class="control-label">${msg.RESOURCE_ID}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.resourceId}" id="resourceIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceUnitTypeWC" class="control-label">${msg.RESOURCE_UNIT_TYPE}</label>
+                            <div class="controls">
+                                <select value="${csOfferResource.resourceUnitType}" id="resourceUnitTypeWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="UNIT_ID" value="NAME" sql="${sql.CS_RESOURCE_UNIT_TYPE_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceTeleserviceWC" class="control-label">${msg.RESOURCE_TELESERVICE}</label>
+                            <div class="controls">
+                                <select value="${csOfferResource.resourceTeleservice}" id="resourceTeleserviceWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="TELE_ID" value="NAME" sql="${sql.CS_OFFER_TELESERVICE_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="apnValueWC" class="control-label">${msg.APN_VALUE}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.apnValue}" id="apnValueWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="mappedResourceTypeWC" class="control-label">${msg.MAPPED_RESOURCE_TYPE}</label>
+                            <div class="controls">
+                                <select value="${csOfferResource.mappedResourceType}" id="mappedResourceTypeWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="RES_TYPE_ID" value="NAME" sql="${sql.CS_RESOURCE_TYPE_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="mappedResourceIdWC" class="control-label">${msg.MAPPED_RESOURCE_ID}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.mappedResourceId}" id="mappedResourceIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resouceDescriptionWC" class="control-label">${msg.RESOUCE_DESCRIPTION}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.resouceDescription}" id="resouceDescriptionWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceRemarkWC" class="control-label">${msg.RESOURCE_REMARK}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.resourceRemark}" id="resourceRemarkWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceRoamingTypeWC" class="control-label">${msg.RESOURCE_ROAMING_TYPE}</label>
+                            <div class="controls">
+                                <select value="${csOfferResource.resourceRoamingType}" id="resourceRoamingTypeWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="LOCATION_ID" value="NAME" sql="${sql.CS_OFFER_LOCATION_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceDestinationWC" class="control-label">${msg.RESOURCE_DESTINATION}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.resourceDestination}" id="resourceDestinationWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceFactorWC" class="control-label">${msg.RESOURCE_FACTOR}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.resourceFactor}" id="resourceFactorWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="maximumValueWC" class="control-label">${msg.MAXIMUM_VALUE}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.maximumValue}" id="maximumValueWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info1WC" class="control-label">${msg.INFO1}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.info1}" id="info1WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info2WC" class="control-label">${msg.INFO2}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.info2}" id="info2WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info3WC" class="control-label">${msg.INFO3}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.info3}" id="info3WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerExist1WC" class="control-label">${msg.OFFER_EXIST1}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.offerExist1}" id="offerExist1WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerMulFactorWC" class="control-label">${msg.OFFER_MUL_FACTOR}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.offerMulFactor}" id="offerMulFactorWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info4WC" class="control-label">${msg.INFO4}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.info4}" id="info4WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info5WC" class="control-label">${msg.INFO5}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.info5}" id="info5WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info6WC" class="control-label">${msg.INFO6}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.info6}" id="info6WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info7WC" class="control-label">${msg.INFO7}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.info7}" id="info7WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info8WC" class="control-label">${msg.INFO8}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.info8}" id="info8WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="info9WC" class="control-label">${msg.INFO9}</label>
+                            <div class="controls">
+                                <input type="text" value="${csOfferResource.info9}" id="info9WC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="saveBean" class=" btn-primary btn">${msg.SAVE_CAPTION}</linkcommand>
+                </div>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

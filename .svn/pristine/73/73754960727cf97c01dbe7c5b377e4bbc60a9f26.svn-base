@@ -1,0 +1,39 @@
+package com.bay.da.web.controller;
+
+import com.bay.da.ejb.domain.Brand;
+
+import eg.java.net.web.jspx.engine.annotation.JspxBean;
+import eg.java.net.web.jspx.engine.util.StringUtility;
+import eg.java.net.web.jspx.ui.controls.WebControl;
+import eg.java.net.web.jspx.ui.pages.ContentPage;
+
+public class BrandViewController extends ContentPage
+{
+	@JspxBean(name="brand")
+Brand brand = new Brand();
+public void deleteBean(WebControl invoker, String args)
+{
+}
+
+
+	int id = 0;
+	
+	@Override
+	protected void pageLoaded()
+	{
+		if (StringUtility.isNullOrEmpty(request.getParameter("id")))
+		{
+			brand = null;
+			redirect("/");
+		}
+		else
+			try
+			{
+				id = Integer.parseInt(request.getParameter("id"));
+			}
+			catch (Exception e)
+			{
+				redirect("/");
+			}
+	}
+}

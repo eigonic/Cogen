@@ -1,0 +1,158 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.motcyResource.MotcyResourceSearchController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/motcyResource/motcyResourceSearch.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="idWC" class="control-label">${msg.ID}</label>
+                            <div class="controls">
+                                <input type="text" id="idWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="nameWC" class="control-label">${msg.NAME}</label>
+                            <div class="controls">
+                                <input type="text" id="nameWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="typeWC" class="control-label">${msg.TYPE}</label>
+                            <div class="controls">
+                                <select id="typeWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="ID" value="NAME" sql="${sql.MOTCY_RES_TYPE_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="unitWC" class="control-label">${msg.UNIT}</label>
+                            <div class="controls">
+                                <select id="unitWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="ID" value="NAME" sql="${sql.MOTCY_UNIT_TYPE_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="defaultValWC" class="control-label">${msg.DEFAULT_VAL}</label>
+                            <div class="controls">
+                                <input type="text" id="defaultValWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdWC" class="control-label">${msg.CREATED}</label>
+                            <div class="controls">
+                                <calendar id="createdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="createdByWC" class="control-label">${msg.CREATED_BY}</label>
+                            <div class="controls">
+                                <input type="text" id="createdByWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="udpatedWC" class="control-label">${msg.UDPATED}</label>
+                            <div class="controls">
+                                <calendar id="udpatedWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="udpatedByWC" class="control-label">${msg.UDPATED_BY}</label>
+                            <div class="controls">
+                                <input type="text" id="udpatedByWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="statusWC" class="control-label">${msg.STATUS}</label>
+                            <div class="controls">
+                                <input type="text" id="statusWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="scGroupWC" class="control-label">${msg.SC_GROUP}</label>
+                            <div class="controls">
+                                <select id="scGroupWC">
+                                    <option>----</option>
+                                    <datalookup datasource="${sqlExp.data_source}" key="ID" value="NAME" sql="${sql.MOTCY_SC_GROUP_LOOKUP}"/>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="resourceIdWC" class="control-label">${msg.RESOURCE_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="resourceIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="doSearch" class=" btn-primary btn">${msg.SEARCH_CAPTION}</linkcommand>
+                    <hr/>
+                </div>
+                <datatable datasource="${sqlExp.data_source}" var="motcyResource_item" casesensitive="true" table="MOTCY_RESOURCE" showrowindex="true" autobind="true" noresults="${msg.NO_RESULTS}" sql="${sql.MOTCY_RESOURCE_SEARCH}">
+                    <dataparam control="idWC" expression="${sqlExp.MOTCY_RESOURCE_ID}"/>
+                    <dataparam control="nameWC" expression="${sqlExp.MOTCY_RESOURCE_NAME}"/>
+                    <dataparam control="typeWC" expression="${sqlExp.MOTCY_RESOURCE_TYPE}"/>
+                    <dataparam control="unitWC" expression="${sqlExp.MOTCY_RESOURCE_UNIT}"/>
+                    <dataparam control="defaultValWC" expression="${sqlExp.MOTCY_RESOURCE_DEFAULT_VAL}"/>
+                    <dataparam control="createdWC" expression="${sqlExp.MOTCY_RESOURCE_CREATED}"/>
+                    <dataparam control="createdByWC" expression="${sqlExp.MOTCY_RESOURCE_CREATED_BY}"/>
+                    <dataparam control="udpatedWC" expression="${sqlExp.MOTCY_RESOURCE_UDPATED}"/>
+                    <dataparam control="udpatedByWC" expression="${sqlExp.MOTCY_RESOURCE_UDPATED_BY}"/>
+                    <dataparam control="statusWC" expression="${sqlExp.MOTCY_RESOURCE_STATUS}"/>
+                    <dataparam control="scGroupWC" expression="${sqlExp.MOTCY_RESOURCE_SC_GROUP}"/>
+                    <dataparam control="resourceIdWC" expression="${sqlExp.MOTCY_RESOURCE_RESOURCE_ID}"/>
+                    <datapk name="ID"/>
+                    <datacolumn fieldname="ID" type="numeric" text="${msg.ID}" id="ID"/>
+                    <datacolumn fieldname="NAME" type="string" text="${msg.NAME}" id="NAME"/>
+                    <datacolumn fieldname="TYPE" type="lookup" lookup="TYPE_FKLP" text="${msg.TYPE}" id="TYPE"/>
+                    <datacolumn fieldname="UNIT" type="lookup" lookup="UNIT_FKLP" text="${msg.UNIT}" id="UNIT"/>
+                    <datacolumn fieldname="DEFAULT_VAL" type="string" text="${msg.DEFAULT_VAL}" id="DEFAULT_VAL"/>
+                    <datacolumn fieldname="CREATED" type="date" text="${msg.CREATED}" id="CREATED"/>
+                    <datacolumn fieldname="CREATED_BY" type="numeric" text="${msg.CREATED_BY}" id="CREATED_BY"/>
+                    <datacolumn fieldname="UDPATED" type="date" text="${msg.UDPATED}" id="UDPATED"/>
+                    <datacolumn fieldname="UDPATED_BY" type="numeric" text="${msg.UDPATED_BY}" id="UDPATED_BY"/>
+                    <datacolumn fieldname="STATUS" type="numeric" text="${msg.STATUS}" id="STATUS"/>
+                    <datacolumn fieldname="SC_GROUP" type="lookup" lookup="SC_GROUP_FKLP" text="${msg.SC_GROUP}" id="SC_GROUP"/>
+                    <datacolumn fieldname="RESOURCE_ID" type="numeric" text="${msg.RESOURCE_ID}" id="RESOURCE_ID"/>
+                    <datacolumn>
+                        <itemtemplate>
+                            <a href="/motcy/motcyResource/motcyResourceView.jspx?id=${motcyResource_item.id}" class="btn btn-mini">
+                                <i class="icon-list-alt icon-black"/>${msg.DETAILS}</a>
+                        </itemtemplate>
+                    </datacolumn>
+                    <datalookup key="ID" sql="${sqlExp.MOTCY_RES_TYPE_LOOKUP}" id="TYPE_FKLP"/>
+                    <datalookup key="ID" sql="${sqlExp.MOTCY_UNIT_TYPE_LOOKUP}" id="UNIT_FKLP"/>
+                    <datalookup key="ID" sql="${sqlExp.MOTCY_SC_GROUP_LOOKUP}" id="SC_GROUP_FKLP"/>
+                    <datacolumncommand type="edit"/>
+                    <datacolumncommand confirm="${msg.CONFIRM_DELETE}" type="delete"/>
+                    <exporttoexcel rowstoexport="all" filename="MOTCY_RESOURCE.xls" command="${msg.SAVE_TO_EXCEL}"/>
+                </datatable>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

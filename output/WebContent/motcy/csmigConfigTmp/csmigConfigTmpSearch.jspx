@@ -1,0 +1,195 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csmigConfigTmp.CsmigConfigTmpSearchController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csmigConfigTmp/csmigConfigTmpSearch.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="idWC" class="control-label">${msg.ID}</label>
+                            <div class="controls">
+                                <input type="text" id="idWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="mdspPkgWC" class="control-label">${msg.MDSP_PKG}</label>
+                            <div class="controls">
+                                <input type="text" id="mdspPkgWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="csOfferIdWC" class="control-label">${msg.CS_OFFER_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="csOfferIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="csUcIdWC" class="control-label">${msg.CS_UC_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="csUcIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="esdpOfferIdWC" class="control-label">${msg.ESDP_OFFER_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="esdpOfferIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="esdpCampaignIdWC" class="control-label">${msg.ESDP_CAMPAIGN_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="esdpCampaignIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="csMigratorWC" class="control-label">${msg.CS_MIGRATOR}</label>
+                            <div class="controls">
+                                <input type="text" id="csMigratorWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="esdpMigratorWC" class="control-label">${msg.ESDP_MIGRATOR}</label>
+                            <div class="controls">
+                                <input type="text" id="esdpMigratorWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="extOfferIdWC" class="control-label">${msg.EXT_OFFER_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="extOfferIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="rateplanIdWC" class="control-label">${msg.RATEPLAN_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="rateplanIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="serviceIdWC" class="control-label">${msg.SERVICE_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="serviceIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="allowMultiWC" class="control-label">${msg.ALLOW_MULTI}</label>
+                            <div class="controls">
+                                <input type="text" id="allowMultiWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="offerGroupWC" class="control-label">${msg.OFFER_GROUP}</label>
+                            <div class="controls">
+                                <input type="text" id="offerGroupWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="packageIdWC" class="control-label">${msg.PACKAGE_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="packageIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="csOfferId2WC" class="control-label">${msg.CS_OFFER_ID2}</label>
+                            <div class="controls">
+                                <input type="text" id="csOfferId2WC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="nameWC" class="control-label">${msg.NAME}</label>
+                            <div class="controls">
+                                <input type="text" id="nameWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="allowanceWC" class="control-label">${msg.ALLOWANCE}</label>
+                            <div class="controls">
+                                <input type="text" id="allowanceWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="doSearch" class=" btn-primary btn">${msg.SEARCH_CAPTION}</linkcommand>
+                    <hr/>
+                </div>
+                <datatable datasource="${sqlExp.data_source}" var="csmigConfigTmp_item" casesensitive="true" table="CSMIG_CONFIG_TMP" showrowindex="true" autobind="true" noresults="${msg.NO_RESULTS}" sql="${sql.CSMIG_CONFIG_TMP_SEARCH}">
+                    <dataparam control="idWC" expression="${sqlExp.CSMIG_CONFIG_TMP_ID}"/>
+                    <dataparam control="mdspPkgWC" expression="${sqlExp.CSMIG_CONFIG_TMP_MDSP_PKG}"/>
+                    <dataparam control="csOfferIdWC" expression="${sqlExp.CSMIG_CONFIG_TMP_CS_OFFER_ID}"/>
+                    <dataparam control="csUcIdWC" expression="${sqlExp.CSMIG_CONFIG_TMP_CS_UC_ID}"/>
+                    <dataparam control="esdpOfferIdWC" expression="${sqlExp.CSMIG_CONFIG_TMP_ESDP_OFFER_ID}"/>
+                    <dataparam control="esdpCampaignIdWC" expression="${sqlExp.CSMIG_CONFIG_TMP_ESDP_CAMPAIGN_ID}"/>
+                    <dataparam control="csMigratorWC" expression="${sqlExp.CSMIG_CONFIG_TMP_CS_MIGRATOR}"/>
+                    <dataparam control="esdpMigratorWC" expression="${sqlExp.CSMIG_CONFIG_TMP_ESDP_MIGRATOR}"/>
+                    <dataparam control="extOfferIdWC" expression="${sqlExp.CSMIG_CONFIG_TMP_EXT_OFFER_ID}"/>
+                    <dataparam control="rateplanIdWC" expression="${sqlExp.CSMIG_CONFIG_TMP_RATEPLAN_ID}"/>
+                    <dataparam control="serviceIdWC" expression="${sqlExp.CSMIG_CONFIG_TMP_SERVICE_ID}"/>
+                    <dataparam control="allowMultiWC" expression="${sqlExp.CSMIG_CONFIG_TMP_ALLOW_MULTI}"/>
+                    <dataparam control="offerGroupWC" expression="${sqlExp.CSMIG_CONFIG_TMP_OFFER_GROUP}"/>
+                    <dataparam control="packageIdWC" expression="${sqlExp.CSMIG_CONFIG_TMP_PACKAGE_ID}"/>
+                    <dataparam control="csOfferId2WC" expression="${sqlExp.CSMIG_CONFIG_TMP_CS_OFFER_ID2}"/>
+                    <dataparam control="nameWC" expression="${sqlExp.CSMIG_CONFIG_TMP_NAME}"/>
+                    <dataparam control="allowanceWC" expression="${sqlExp.CSMIG_CONFIG_TMP_ALLOWANCE}"/>
+                    <datacolumn fieldname="ID" type="numeric" text="${msg.ID}" id="ID"/>
+                    <datacolumn fieldname="MDSP_PKG" type="string" text="${msg.MDSP_PKG}" id="MDSP_PKG"/>
+                    <datacolumn fieldname="CS_OFFER_ID" type="numeric" text="${msg.CS_OFFER_ID}" id="CS_OFFER_ID"/>
+                    <datacolumn fieldname="CS_UC_ID" type="numeric" text="${msg.CS_UC_ID}" id="CS_UC_ID"/>
+                    <datacolumn fieldname="ESDP_OFFER_ID" type="numeric" text="${msg.ESDP_OFFER_ID}" id="ESDP_OFFER_ID"/>
+                    <datacolumn fieldname="ESDP_CAMPAIGN_ID" type="numeric" text="${msg.ESDP_CAMPAIGN_ID}" id="ESDP_CAMPAIGN_ID"/>
+                    <datacolumn fieldname="CS_MIGRATOR" type="string" text="${msg.CS_MIGRATOR}" id="CS_MIGRATOR"/>
+                    <datacolumn fieldname="ESDP_MIGRATOR" type="string" text="${msg.ESDP_MIGRATOR}" id="ESDP_MIGRATOR"/>
+                    <datacolumn fieldname="EXT_OFFER_ID" type="string" text="${msg.EXT_OFFER_ID}" id="EXT_OFFER_ID"/>
+                    <datacolumn fieldname="RATEPLAN_ID" type="string" text="${msg.RATEPLAN_ID}" id="RATEPLAN_ID"/>
+                    <datacolumn fieldname="SERVICE_ID" type="string" text="${msg.SERVICE_ID}" id="SERVICE_ID"/>
+                    <datacolumn fieldname="ALLOW_MULTI" type="string" text="${msg.ALLOW_MULTI}" id="ALLOW_MULTI"/>
+                    <datacolumn fieldname="OFFER_GROUP" type="string" text="${msg.OFFER_GROUP}" id="OFFER_GROUP"/>
+                    <datacolumn fieldname="PACKAGE_ID" type="string" text="${msg.PACKAGE_ID}" id="PACKAGE_ID"/>
+                    <datacolumn fieldname="CS_OFFER_ID2" type="numeric" text="${msg.CS_OFFER_ID2}" id="CS_OFFER_ID2"/>
+                    <datacolumn fieldname="NAME" type="string" text="${msg.NAME}" id="NAME"/>
+                    <datacolumn fieldname="ALLOWANCE" type="string" text="${msg.ALLOWANCE}" id="ALLOWANCE"/>
+                    <datacolumn>
+                        <itemtemplate>
+                            <a href="/motcy/csmigConfigTmp/csmigConfigTmpView.jspx?id=${csmigConfigTmp_item.id}" class="btn btn-mini">
+                                <i class="icon-list-alt icon-black"/>${msg.DETAILS}</a>
+                        </itemtemplate>
+                    </datacolumn>
+                    <datacolumncommand type="edit"/>
+                    <datacolumncommand confirm="${msg.CONFIRM_DELETE}" type="delete"/>
+                    <exporttoexcel rowstoexport="all" filename="CSMIG_CONFIG_TMP.xls" command="${msg.SAVE_TO_EXCEL}"/>
+                </datatable>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>

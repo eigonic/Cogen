@@ -1,0 +1,23 @@
+package com.bay.da.web.controller;
+
+import com.bay.da.ejb.domain.Users;
+
+import eg.java.net.web.jspx.engine.annotation.JspxBean;
+import eg.java.net.web.jspx.ui.controls.WebControl;
+import eg.java.net.web.jspx.ui.pages.ContentPage;
+
+public class UsersSearchController extends ContentPage
+{
+	
+	boolean isEdit;
+
+	@Override
+	protected void pageLoaded()
+	{
+		isEdit = StringUtility.isNullOrEmpty(request.getParameter("id"));
+	}
+	
+	@JspxBean(name="users")
+Users users = new Users();
+
+}

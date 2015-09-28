@@ -1,0 +1,225 @@
+<page controller="com.etisalat.esdp.admin.controller.motcy.csmigReconsileSubs201411112.CsmigReconsileSubs201411112SearchController" master="/motcy/master.jspx">
+	<contentHolder id="mainholder">
+		<form class=" form-horizontal" action="/motcy/csmigReconsileSubs201411112/csmigReconsileSubs201411112Search.jspx">
+			<ajaxpanel>
+                <div class="row">
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="msisdnWC" class="control-label">${msg.MSISDN}</label>
+                            <div class="controls">
+                                <input type="text" id="msisdnWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="intervalIdWC" class="control-label">${msg.INTERVAL_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="intervalIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="extOfferIdWC" class="control-label">${msg.EXT_OFFER_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="extOfferIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="campaignIdWC" class="control-label">${msg.CAMPAIGN_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="campaignIdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="campaignTypeWC" class="control-label">${msg.CAMPAIGN_TYPE}</label>
+                            <div class="controls">
+                                <input type="text" id="campaignTypeWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="startDateWC" class="control-label">${msg.START_DATE}</label>
+                            <div class="controls">
+                                <calendar id="startDateWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="lastRenewalWC" class="control-label">${msg.LAST_RENEWAL}</label>
+                            <div class="controls">
+                                <calendar id="lastRenewalWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="nextRenewalWC" class="control-label">${msg.NEXT_RENEWAL}</label>
+                            <div class="controls">
+                                <calendar id="nextRenewalWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="lastReasonWC" class="control-label">${msg.LAST_REASON}</label>
+                            <div class="controls">
+                                <input type="text" id="lastReasonWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="chargingCountWC" class="control-label">${msg.CHARGING_COUNT}</label>
+                            <div class="controls">
+                                <input type="text" id="chargingCountWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="statusWC" class="control-label">${msg.STATUS}</label>
+                            <div class="controls">
+                                <input type="text" id="statusWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="csOffer1IdWC" class="control-label">${msg.CS_OFFER1_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="csOffer1IdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="csOffer2IdWC" class="control-label">${msg.CS_OFFER2_ID}</label>
+                            <div class="controls">
+                                <input type="text" id="csOffer2IdWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="limitedServiceWC" class="control-label">${msg.LIMITED_SERVICE}</label>
+                            <div class="controls">
+                                <input type="text" id="limitedServiceWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="processStatusWC" class="control-label">${msg.PROCESS_STATUS}</label>
+                            <div class="controls">
+                                <input type="text" id="processStatusWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="processorWC" class="control-label">${msg.PROCESSOR}</label>
+                            <div class="controls">
+                                <input type="text" id="processorWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="processDateWC" class="control-label">${msg.PROCESS_DATE}</label>
+                            <div class="controls">
+                                <calendar id="processDateWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="addonCountWC" class="control-label">${msg.ADDON_COUNT}</label>
+                            <div class="controls">
+                                <input type="text" id="addonCountWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="statusUpdatesWC" class="control-label">${msg.STATUS_UPDATES}</label>
+                            <div class="controls">
+                                <input type="text" id="statusUpdatesWC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="control-group info">
+                            <label for="sourceWC" class="control-label">${msg.SOURCE}</label>
+                            <div class="controls">
+                                <input type="text" id="sourceWC"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <linkcommand autocomplete="off" data-loading-text="..." onserverclick="doSearch" class=" btn-primary btn">${msg.SEARCH_CAPTION}</linkcommand>
+                    <hr/>
+                </div>
+                <datatable datasource="${sqlExp.data_source}" var="csmigReconsileSubs201411112_item" casesensitive="true" table="CSMIG_RECONSILE_SUBS_201411112" showrowindex="true" autobind="true" noresults="${msg.NO_RESULTS}" sql="${sql.CSMIG_RECONSILE_SUBS_201411112_SEARCH}">
+                    <dataparam control="msisdnWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_MSISDN}"/>
+                    <dataparam control="intervalIdWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_INTERVAL_ID}"/>
+                    <dataparam control="extOfferIdWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_EXT_OFFER_ID}"/>
+                    <dataparam control="campaignIdWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_CAMPAIGN_ID}"/>
+                    <dataparam control="campaignTypeWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_CAMPAIGN_TYPE}"/>
+                    <dataparam control="startDateWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_START_DATE}"/>
+                    <dataparam control="lastRenewalWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_LAST_RENEWAL}"/>
+                    <dataparam control="nextRenewalWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_NEXT_RENEWAL}"/>
+                    <dataparam control="lastReasonWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_LAST_REASON}"/>
+                    <dataparam control="chargingCountWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_CHARGING_COUNT}"/>
+                    <dataparam control="statusWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_STATUS}"/>
+                    <dataparam control="csOffer1IdWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_CS_OFFER1_ID}"/>
+                    <dataparam control="csOffer2IdWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_CS_OFFER2_ID}"/>
+                    <dataparam control="limitedServiceWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_LIMITED_SERVICE}"/>
+                    <dataparam control="processStatusWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_PROCESS_STATUS}"/>
+                    <dataparam control="processorWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_PROCESSOR}"/>
+                    <dataparam control="processDateWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_PROCESS_DATE}"/>
+                    <dataparam control="addonCountWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_ADDON_COUNT}"/>
+                    <dataparam control="statusUpdatesWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_STATUS_UPDATES}"/>
+                    <dataparam control="sourceWC" expression="${sqlExp.CSMIG_RECONSILE_SUBS_201411112_SOURCE}"/>
+                    <datacolumn fieldname="MSISDN" type="numeric" text="${msg.MSISDN}" id="MSISDN"/>
+                    <datacolumn fieldname="INTERVAL_ID" type="numeric" text="${msg.INTERVAL_ID}" id="INTERVAL_ID"/>
+                    <datacolumn fieldname="EXT_OFFER_ID" type="string" text="${msg.EXT_OFFER_ID}" id="EXT_OFFER_ID"/>
+                    <datacolumn fieldname="CAMPAIGN_ID" type="numeric" text="${msg.CAMPAIGN_ID}" id="CAMPAIGN_ID"/>
+                    <datacolumn fieldname="CAMPAIGN_TYPE" type="string" text="${msg.CAMPAIGN_TYPE}" id="CAMPAIGN_TYPE"/>
+                    <datacolumn fieldname="START_DATE" type="date" text="${msg.START_DATE}" id="START_DATE"/>
+                    <datacolumn fieldname="LAST_RENEWAL" type="date" text="${msg.LAST_RENEWAL}" id="LAST_RENEWAL"/>
+                    <datacolumn fieldname="NEXT_RENEWAL" type="date" text="${msg.NEXT_RENEWAL}" id="NEXT_RENEWAL"/>
+                    <datacolumn fieldname="LAST_REASON" type="numeric" text="${msg.LAST_REASON}" id="LAST_REASON"/>
+                    <datacolumn fieldname="CHARGING_COUNT" type="numeric" text="${msg.CHARGING_COUNT}" id="CHARGING_COUNT"/>
+                    <datacolumn fieldname="STATUS" type="numeric" text="${msg.STATUS}" id="STATUS"/>
+                    <datacolumn fieldname="CS_OFFER1_ID" type="numeric" text="${msg.CS_OFFER1_ID}" id="CS_OFFER1_ID"/>
+                    <datacolumn fieldname="CS_OFFER2_ID" type="numeric" text="${msg.CS_OFFER2_ID}" id="CS_OFFER2_ID"/>
+                    <datacolumn fieldname="LIMITED_SERVICE" type="string" text="${msg.LIMITED_SERVICE}" id="LIMITED_SERVICE"/>
+                    <datacolumn fieldname="PROCESS_STATUS" type="numeric" text="${msg.PROCESS_STATUS}" id="PROCESS_STATUS"/>
+                    <datacolumn fieldname="PROCESSOR" type="numeric" text="${msg.PROCESSOR}" id="PROCESSOR"/>
+                    <datacolumn fieldname="PROCESS_DATE" type="date" text="${msg.PROCESS_DATE}" id="PROCESS_DATE"/>
+                    <datacolumn fieldname="ADDON_COUNT" type="numeric" text="${msg.ADDON_COUNT}" id="ADDON_COUNT"/>
+                    <datacolumn fieldname="STATUS_UPDATES" type="string" text="${msg.STATUS_UPDATES}" id="STATUS_UPDATES"/>
+                    <datacolumn fieldname="SOURCE" type="string" text="${msg.SOURCE}" id="SOURCE"/>
+                    <datacolumn>
+                        <itemtemplate>
+                            <a href="/motcy/csmigReconsileSubs201411112/csmigReconsileSubs201411112View.jspx?id=${csmigReconsileSubs201411112_item.id}" class="btn btn-mini">
+                                <i class="icon-list-alt icon-black"/>${msg.DETAILS}</a>
+                        </itemtemplate>
+                    </datacolumn>
+                    <datacolumncommand type="edit"/>
+                    <datacolumncommand confirm="${msg.CONFIRM_DELETE}" type="delete"/>
+                    <exporttoexcel rowstoexport="all" filename="CSMIG_RECONSILE_SUBS_201411112.xls" command="${msg.SAVE_TO_EXCEL}"/>
+                </datatable>
+            </ajaxpanel>
+		</form>
+	</contentHolder>
+</page>
